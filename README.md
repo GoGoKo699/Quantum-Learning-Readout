@@ -8,7 +8,7 @@ The source is the full-rank separable family
 
 ```math
 \rho_{U,v}=\frac{I+vF_U}{d(d+v)},\qquad
-F_U=(I\otimes U)F(I\otimes U^\dagger),\qquad 0<v<1,
+F_U=(I\otimes U)F(I\otimes U^\dagger),\qquad 0\lt v\lt 1,
 ```
 
 where $`F`$ swaps two $`d`$-dimensional registers and $`v`$ is known. The learner outputs a classical unitary estimate. For Haar-average gate infidelity and $`p=d^2-1`$, the optimal risk satisfies $`R_N=C/N+o_{d,v}(N^{-1})`$:

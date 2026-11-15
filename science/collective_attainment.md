@@ -70,7 +70,7 @@ The loss has the local expansion
 
 ```math
 r(I,U(\theta))
-=w\|\theta\|^2+O_d(\|\theta\|^3),
+=w\Vert \theta\Vert ^2+O_d(\Vert \theta\Vert ^3),
 \qquad w=\frac{d}{d+1}.
 ```
 
@@ -114,25 +114,25 @@ the theorem gives, for every $`h`$ in the selected countable dense set,
 ```math
 \mathbb E_h\widehat h_q\longrightarrow h,
 \qquad
-\mathbb E_h\|\widehat h_q-h\|^2\longrightarrow\frac pj.
+\mathbb E_h\Vert \widehat h_q-h\Vert ^2\longrightarrow\frac pj.
 ```
 
 The second statement follows from its mean and covariance conclusions, using $`W=wI_p`$. The theorem supplies this local-shift statement; the conversion to an unknown-center global protocol is proved below.
 
 ## Uniform local control after clipping
 
-Fix a radius $`R\gt 0`$. Project $`\widehat h_q`$ onto the Euclidean ball of radius $`2R`$, obtaining $`\widehat h_{q,R}`$. For $`\|h\|\le R`$, this projection cannot increase squared error to $`h`$. Hence, at each dense-set point in that ball,
+Fix a radius $`R\gt 0`$. Project $`\widehat h_q`$ onto the Euclidean ball of radius $`2R`$, obtaining $`\widehat h_{q,R}`$. For $`\Vert h\Vert \le R`$, this projection cannot increase squared error to $`h`$. Hence, at each dense-set point in that ball,
 
 ```math
 \limsup_{q\to\infty}
-\mathbb E_h\|\widehat h_{q,R}-h\|^2\le\frac pj.
+\mathbb E_h\Vert \widehat h_{q,R}-h\Vert ^2\le\frac pj.
 ```
 
 The clipped risks are equicontinuous on the whole ball. Here is an explicit justification. The root fidelity of two source states has the following form. If the eigenphases of $`U^\dagger V`$ are $`\theta_1,\ldots,\theta_d`$, set $`x_{jk}=\sin^2((\theta_j-\theta_k)/2)`$. Block diagonalization into the common $`|jj\rangle`$ blocks and the two-dimensional $`\{|jk\rangle,|kj\rangle\}`$ blocks gives
 
 ```math
 f(\rho_U(v),\rho_V(v))
-=\frac{d(1+v)+2\sum_{j<k}\sqrt{1-v^2x_{jk}}}{d(d+v)}.
+=\frac{d(1+v)+2\sum_{j\lt k}\sqrt{1-v^2x_{jk}}}{d(d+v)}.
 ```
 
 In particular,
@@ -146,17 +146,17 @@ For local shifts $`h,h'`$, the unitary exponential and the loss obey
 
 ```math
 r(U(h/\sqrt q),U(h'/\sqrt q))
-\le C_d\frac{\|h-h'\|^2}{q}.
+\le C_d\frac{\Vert h-h'\Vert ^2}{q}.
 ```
 
 Fidelity multiplies under tensor products. The Fuchs–van de Graaf inequality therefore gives a constant $`B_{d,v}`$, independent of $`q`$, such that
 
 ```math
-\frac12\left\|
+\frac12\left\Vert 
 \rho_{U(h/\sqrt q)}(v)^{\otimes q}
 -\rho_{U(h'/\sqrt q)}(v)^{\otimes q}
-\right\|_1
-\le B_{d,v}\|h-h'\|.
+\right\Vert _1
+\le B_{d,v}\Vert h-h'\Vert .
 ```
 
 After clipping, the squared loss is at most $`9R^2`$ for $`h`$ in the radius-$`R`$ ball. Changing $`h`$ changes that bounded loss continuously as well. The displayed trace-distance estimate thus gives an equicontinuity bound for the risk functions, with a constant depending on $`R,d,v`$ and not on $`q`$.
@@ -164,8 +164,8 @@ After clipping, the squared loss is at most $`9R^2`$ for $`h`$ in the radius-$`R
 For any $`\eta\gt 0`$, take a finite sufficiently fine net of dense-set points in the ball. Pointwise convergence at those finitely many points and equicontinuity imply that, for all sufficiently large $`q`$,
 
 ```math
-\sup_{\|h\|\le R}
-\mathbb E_h\|\widehat h_{q,R}-h\|^2
+\sup_{\Vert h\Vert \le R}
+\mathbb E_h\Vert \widehat h_{q,R}-h\Vert ^2
 \le\frac pj+\eta.
 ```
 
@@ -176,30 +176,30 @@ Only the clipped upper risk is used in this step. There is no inference of unbou
 Use $`m`$ pairs for a fixed informationally complete measurement on the two-register state. Linear inversion gives a Hermitian state estimate $`\widetilde\rho_m`$. It need not be positive. Fit a unitary $`\widehat U_0`$ by minimizing
 
 ```math
-\|\widetilde\rho_m-\rho_V(v)\|_2
+\Vert \widetilde\rho_m-\rho_V(v)\Vert _2
 \quad\text{over }V\in\mathrm{PU}(d).
 ```
 
 Compactness ensures a minimizer exists; a measurable tie-breaking choice may be fixed. For the true $`U`$,
 
 ```math
-\|\rho_{\widehat U_0}(v)-\rho_U(v)\|_2
-\le2\|\widetilde\rho_m-\rho_U(v)\|_2.
+\Vert \rho_{\widehat U_0}(v)-\rho_U(v)\Vert _2
+\le2\Vert \widetilde\rho_m-\rho_U(v)\Vert _2.
 ```
 
 An exact identity converts this state error into unitary error:
 
 ```math
-\|\rho_U(v)-\rho_V(v)\|_2^2
+\Vert \rho_U(v)-\rho_V(v)\Vert _2^2
 =\frac{2v^2(d+1)}{d(d+v)^2}\,r(U,V).
 ```
 
 Indeed $`F_U^2=F_V^2=I`$ and $`\mathrm{Tr}(F_UF_V)=|\mathrm{Tr}(U^\dagger V)|^2`$.
 
-Let $`\Delta(U,V)`$ be a fixed bi-invariant geodesic distance on $`\mathrm{PU}(d)`$, normalized to agree with $`\|\theta\|`$ in the local coordinates at identity. On this compact group, $`\Delta^2`$ and $`r`$ are comparable, with constants depending on $`d`$. Bounded-outcome concentration for the finite informationally complete measurement, the fit inequality, and the exact identity give
+Let $`\Delta(U,V)`$ be a fixed bi-invariant geodesic distance on $`\mathrm{PU}(d)`$, normalized to agree with $`\Vert \theta\Vert `$ in the local coordinates at identity. On this compact group, $`\Delta^2`$ and $`r`$ are comparable, with constants depending on $`d`$. Bounded-outcome concentration for the finite informationally complete measurement, the fit inequality, and the exact identity give
 
 ```math
-\Pr_U\{\Delta(\widehat U_0,U)>t\}
+\Pr_U\{\Delta(\widehat U_0,U)\gt t\}
 \le A_{d,v}\exp(-b_{d,v}mt^2),
 ```
 
@@ -243,13 +243,13 @@ On the event
 \left\{\Delta(\widehat U_0,U)\le R/\sqrt q\right\},
 ```
 
-the true residual has a local coordinate $`h`$ with $`\|h\|\le R`$. Fixed coordinate constants can be included in the choice of radius. Conditional on the pilot, the remaining pairs are independent source copies, so the uniform compact-risk bound applies.
+the true residual has a local coordinate $`h`$ with $`\Vert h\Vert \le R`$. Fixed coordinate constants can be included in the choice of radius. Conditional on the pilot, the remaining pairs are independent source copies, so the uniform compact-risk bound applies.
 
-For $`\|h\|\le R`$ and $`\|\widehat h_{q,R}\|\le2R`$, the smooth loss expansion gives
+For $`\Vert h\Vert \le R`$ and $`\Vert \widehat h_{q,R}\Vert \le2R`$, the smooth loss expansion gives
 
 ```math
 q\,r(\widehat U,U)
-=w\|\widehat h_{q,R}-h\|^2
+=w\Vert \widehat h_{q,R}-h\Vert ^2
 +O_d(R^3/\sqrt q).
 ```
 
@@ -262,7 +262,7 @@ Controlling only $`\Pr(\mathcal G_N^c)`$ would not suffice: a rare pilot failure
 Put $`D=\Delta(\widehat U_0,U)`$ and $`a=R^2/q`$. Integrating the pilot tail gives
 
 ```math
-\mathbb E_U[D^2\mathbf1\{D^2>a\}]
+\mathbb E_U[D^2\mathbf1\{D^2\gt a\}]
 \le A_{d,v}\left(a+\frac1{b_{d,v}m}\right)
 \exp(-b_{d,v}ma),
 ```

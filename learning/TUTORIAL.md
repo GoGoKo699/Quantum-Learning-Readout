@@ -126,7 +126,7 @@ Use the three Pauli matrices as generators, so $`\mathrm{Tr}(T_aT_b)=2\delta_{ab
 ```math
 \ell(U,\widehat U)
 =\frac23\sum_{a=1}^3(\widehat\theta_a-\theta_a)^2
-+o(\|\widehat\theta-\theta\|^2).
++o(\Vert \widehat\theta-\theta\Vert ^2).
 ```
 
 The information ceilings and their attainable precision coefficients are:

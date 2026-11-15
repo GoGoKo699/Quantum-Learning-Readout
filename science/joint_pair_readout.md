@@ -39,7 +39,7 @@ K_{\mathrm{pair}}
 
 This includes arbitrary outcome sets and arbitrary joint operations on the two registers. The bound applies conditionally at every classical-history node, so adaptive changes of the one-pair measurement cannot increase the per-pair trace budget.
 
-It is enough to prove the ceiling for rank-one effects. Spectrally refining an effect preserves its probability as a sum and cannot decrease classical Fisher information: for each real tangent direction, $`(\sum_j\dot p_j)^2/(\sum_jp_j)\leq\sum_j\dot p_j^2/p_j`$. Write a refined effect as $`w|z\rangle\langle z|`$, where $`\|z\|=1`$ and $`w\geq0`$. Decompose it into exchange-symmetric and exchange-antisymmetric parts,
+It is enough to prove the ceiling for rank-one effects. Spectrally refining an effect preserves its probability as a sum and cannot decrease classical Fisher information: for each real tangent direction, $`(\sum_j\dot p_j)^2/(\sum_jp_j)\leq\sum_j\dot p_j^2/p_j`$. Write a refined effect as $`w|z\rangle\langle z|`$, where $`\Vert z\Vert =1`$ and $`w\geq0`$. Decompose it into exchange-symmetric and exchange-antisymmetric parts,
 
 ```math
 |z\rangle=|s\rangle+|a\rangle,
@@ -51,7 +51,7 @@ It is enough to prove the ceiling for rank-one effects. Spectrally refining an e
 P_\pm=\frac{I\pm F}{2}.
 ```
 
-Put $`x=\|s\|^2`$, so $`\|a\|^2=1-x`$. The outcome probability and its derivative are
+Put $`x=\Vert s\Vert ^2`$, so $`\Vert a\Vert ^2=1-x`$. The outcome probability and its derivative are
 
 ```math
 \begin{aligned}
@@ -73,9 +73,9 @@ S^{\mathsf T}=S,
 \qquad
 A^{\mathsf T}=-A,
 \qquad
-\|S\|_{\mathrm F}^2=x,
+\Vert S\Vert _{\mathrm F}^2=x,
 \qquad
-\|A\|_{\mathrm F}^2=1-x.
+\Vert A\Vert _{\mathrm F}^2=1-x.
 ```
 
 The cross partial trace is
@@ -94,18 +94,18 @@ Define the Hermitian matrix $`Q=(R-R^\dagger)/(2i)`$. Parseval's identity in the
 \sum_{j=1}^{p}
 \left(\mathrm{Im}
 \langle a|I\otimes T_j|s\rangle\right)^2
-=d\|Q\|_{\mathrm F}^2
-\leq d\|R\|_{\mathrm F}^2.
+=d\Vert Q\Vert _{\mathrm F}^2
+\leq d\Vert R\Vert _{\mathrm F}^2.
 ```
 
 The identity component vanishes because $`\mathrm{Tr}Q=0`$. A complex antisymmetric matrix has paired nonzero singular values. Consequently,
 
 ```math
-\|A\|_{\mathrm{op}}^2
-\leq\frac12\|A\|_{\mathrm F}^2,
+\Vert A\Vert _{\mathrm{op}}^2
+\leq\frac12\Vert A\Vert _{\mathrm F}^2,
 \qquad
-\|S\overline A\|_{\mathrm F}^2
-\leq\frac12\|S\|_{\mathrm F}^2\|A\|_{\mathrm F}^2.
+\Vert S\overline A\Vert _{\mathrm F}^2
+\leq\frac12\Vert S\Vert _{\mathrm F}^2\Vert A\Vert _{\mathrm F}^2.
 ```
 
 For completeness, the pairing can be seen without choosing a normal form. If $`A^\dagger A u=\sigma^2u`$ with $`\sigma\gt 0`$, then $`\overline A\,\overline u/\sigma`$ is a normalized, orthogonal eigenvector with the same eigenvalue. This uses $`A^\dagger=-\overline A`$ and $`u^{\mathsf T}Au=0`$. Applied to the largest singular value, the two orthogonal vectors prove the displayed operator-norm bound.
@@ -134,7 +134,7 @@ For $`0\lt v\lt 1`$,
 
 ```math
 f_v''(x)
-=-\frac{2(1-v^2)}{(1-v+2vx)^3}<0.
+=-\frac{2(1-v^2)}{(1-v+2vx)^3}\lt 0.
 ```
 
 POVM completeness gives, with sums replaced by integrals for continuous outcomes,
@@ -256,7 +256,7 @@ In the chosen local coordinates,
 ```math
 r(I,U_\theta)
 =\frac{d}{d+1}\sum_a\theta_a^2
-+o(\|\theta\|^2).
++o(\Vert \theta\Vert ^2).
 ```
 
 For fixed $`d`$ and fixed $`0\lt v\lt 1`$, the sharp single-pair asymptotic risk coefficient is

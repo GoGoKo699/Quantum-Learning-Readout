@@ -110,7 +110,7 @@ Define
 ```math
 f_v(t)=\frac{t(1-t)}{1+vt},
 \qquad
-f_v''(t)=-\frac{2(1+v)}{(1+vt)^3}<0.
+f_v''(t)=-\frac{2(1+v)}{(1+vt)^3}\lt 0.
 ```
 
 The weighted average overlap is $`1/d`$. Jensen's inequality therefore gives
@@ -185,7 +185,7 @@ Here is an explicit route from the centered design to a global estimator. It als
 Use $`m=\lfloor N^{3/4}\rfloor`$ examples for a fixed finite product informationally complete POVM on $`A:B`$. Linear reconstruction gives an estimate $`\widetilde\sigma`$ whose finite moments satisfy, at fixed dimension,
 
 ```math
-\mathbb E\|\widetilde\sigma-\sigma_{U,v}\|_2^{2q}
+\mathbb E\Vert \widetilde\sigma-\sigma_{U,v}\Vert _2^{2q}
 =
 O(m^{-q})
 ```
@@ -195,7 +195,7 @@ for each fixed integer $`q`$. These are bounded finite-outcome sample averages, 
 Choose a nearest model state $`\sigma_{U_0,v}`$ in Hilbert–Schmidt distance. A minimizer exists by compactness. The exact identity
 
 ```math
-\|\sigma_{U,v}-\sigma_{V,v}\|_2^2
+\Vert \sigma_{U,v}-\sigma_{V,v}\Vert _2^2
 =
 \frac{2v^2}{(d+v)^2}L(U,V)
 ```
@@ -208,7 +208,7 @@ U_0^\dagger U
 \exp\left(i\sum_a\theta_{0,a}T_a\right).
 ```
 
-Then $`\mathbb E\|\theta_0\|^{2q}=O(m^{-q})`$ on that neighborhood. The probability of being outside it is $`O(m^{-q})`$ for any chosen fixed $`q`$. In particular, its bounded-loss contribution is $`o(1/N)`$ when $`q\geq2`$.
+Then $`\mathbb E\Vert \theta_0\Vert ^{2q}=O(m^{-q})`$ on that neighborhood. The probability of being outside it is $`O(m^{-q})`$ for any chosen fixed $`q`$. In particular, its bounded-loss contribution is $`o(1/N)`$ when $`q\geq2`$.
 
 The pilot is an existence construction with ordinary classical processing. Efficient global fitting and its gate costs are not included in the sample coefficient.
 
@@ -228,23 +228,23 @@ The source is full rank. At fixed $`d,v`$, its likelihoods and their derivatives
 ```math
 \mathbb E_{\theta_0}s_0
 =
-k_{\mathrm{SEP}}\theta_0+O(\|\theta_0\|^2),
+k_{\mathrm{SEP}}\theta_0+O(\Vert \theta_0\Vert ^2),
 \qquad
 \mathrm{Cov}_{\theta_0}(s_0)
 =
-k_{\mathrm{SEP}}I_p+O(\|\theta_0\|).
+k_{\mathrm{SEP}}I_p+O(\Vert \theta_0\Vert ).
 ```
 
 It follows that
 
 ```math
-\mathbb E\|\widetilde\theta-\theta_0\|^2
+\mathbb E\Vert \widetilde\theta-\theta_0\Vert ^2
 =
 \frac{p}{N_2k_{\mathrm{SEP}}}
 +
-O\left(\frac{\mathbb E\|\theta_0\|}{N_2}\right)
+O\left(\frac{\mathbb E\Vert \theta_0\Vert }{N_2}\right)
 +
-O\bigl(\mathbb E\|\theta_0\|^4\bigr).
+O\bigl(\mathbb E\Vert \theta_0\Vert ^4\bigr).
 ```
 
 The last two terms are $`o(1/N)`$: the pilot is consistent and $`N/m^2\to0`$. One may truncate the estimate to a fixed local ball to control exceptional outcomes. Bounded score moments and the pilot's higher-moment bounds make the resulting risk correction $`o(1/N)`$.
@@ -263,7 +263,7 @@ The local expansion of the stipulated loss is
 \ell(U,\widehat U)
 =
 \frac{d}{d+1}
-\|\widetilde\theta-\theta_0\|^2
+\Vert \widetilde\theta-\theta_0\Vert ^2
 +
 \text{a remainder whose expectation is }o(1/N).
 ```

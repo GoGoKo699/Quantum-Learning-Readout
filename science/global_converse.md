@@ -87,7 +87,7 @@ Indeed, conjugation by $`W`$ has superoperator trace $`|\mathrm{Tr}W|^2`$ on all
 and
 
 ```math
-\|\mathcal R(V)-\mathcal R(U)\|_F^2
+\Vert \mathcal R(V)-\mathcal R(U)\Vert _F^2
 =
 2d^2L(U,V).
 ```
@@ -160,7 +160,7 @@ and then summing over $`a`$ gives
 \mathbb E\sum_a
 S_a\langle E,X_a\mathcal R\rangle_F
 &=
-\mathbb E\sum_a\|X_a\mathcal R\|_F^2
+\mathbb E\sum_a\Vert X_a\mathcal R\Vert _F^2
 -\mathbb E\left\langle E,\sum_aX_a^2\mathcal R\right\rangle_F\\
 &=
 Cp+C\,\mathbb E\langle E,\mathcal R\rangle_F\\
@@ -183,7 +183,7 @@ The tangent orthogonality from step 2 implies a projection bound:
 ```math
 \sum_a\langle E,X_a\mathcal R\rangle_F^2
 \leq
-C\|E\|_F^2
+C\Vert E\Vert _F^2
 =
 2Cd^2L(U,\widehat U).
 ```
@@ -194,7 +194,7 @@ Consequently,
 \begin{aligned}
 C^2(p-d^2R_N)^2
 &\leq
-\mathbb E\|S\|^2\;
+\mathbb E\Vert S\Vert ^2\;
 \mathbb E\sum_a\langle E,X_a\mathcal R\rangle_F^2\\
 &\leq
 NK\,2Cd^2R_N.
@@ -208,10 +208,10 @@ Since $`C=2d^2`$, cancellation yields the stated bound.
 For SEP or PAIR, write the likelihood as the product of conditional likelihoods of successive pair outcomes. At a fixed target the total score is the sum of the conditional scores. Each conditional score has zero conditional mean, so cross terms vanish:
 
 ```math
-\mathbb E_U\|S_N\|^2
+\mathbb E_U\Vert S_N\Vert ^2
 =
 \sum_{t=1}^N
-\mathbb E_U\|S_t^{\mathrm{conditional}}\|^2
+\mathbb E_U\Vert S_t^{\mathrm{conditional}}\Vert ^2
 \leq NK.
 ```
 
