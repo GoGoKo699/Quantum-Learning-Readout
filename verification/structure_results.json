@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "checked_local_links": 44,
+  "errors": [],
+  "scope": "All current Markdown files; destination existence and math delimiter balance. Hosted rendering not inspected."
+}
