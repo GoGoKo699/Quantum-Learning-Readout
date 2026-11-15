@@ -12,6 +12,10 @@ Question: what do coherent acquisition resources change when learning a unitary 
 - Source, storage, genuine POVM, precision and output charges: science/resources.md
 - Primary foundations and exact-model comparisons: references/related_work.md
 - Bibliography: references/references.bib
+- Learning entrypoint and selected 2020 review: learning/README.md
+- Exactly 30 scientific milestones: learning/MILESTONES.md
+- Source locations, notation and proof bridge: learning/ANCHOR_BRIDGE.md
+- Worked qubit example and connected argument: learning/TUTORIAL.md
 - Reproducible finite checks and coverage: verification/README.md
 
 Essential qualifiers: fixed d>=2 and known0<v<1, followed by N->infinity; classical unitary estimate; per-pair separable and joint classes retain only classical records between examples. Supplied quantum data do not provide active unitary queries. A normalized orbit POVM is not random binary testing with free postselection. No dimension-uniform finite-error or runtime advantage is established.

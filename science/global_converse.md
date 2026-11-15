@@ -7,7 +7,7 @@ The [model](model.md) fixes the source, the three readout classes, the loss, and
 ```math
 p=d^2-1,
 \qquad
-\operatorname{Tr}(T_aT_b)=d\delta_{ab},
+\mathrm{Tr}(T_aT_b)=d\delta_{ab},
 \qquad
 R_N=\mathbb E\,L(U,\widehat U).
 ```
@@ -63,23 +63,23 @@ Let $`\mathcal R(U)`$ be the adjoint representation on the real vector space of 
 ```math
 \mathcal R(U)_{ab}
 =
-\frac1d\operatorname{Tr}
+\frac1d\mathrm{Tr}
 \bigl(T_aUT_bU^\dagger\bigr).
 ```
 
 It is a real orthogonal $`p\times p`$ matrix and is insensitive to global phase. For $`W=V^\dagger U`$,
 
 ```math
-\operatorname{Tr}
+\mathrm{Tr}
 \bigl[\mathcal R(V)^T\mathcal R(U)\bigr]
 =
-|\operatorname{Tr}W|^2-1.
+|\mathrm{Tr}W|^2-1.
 ```
 
-Indeed, conjugation by $`W`$ has superoperator trace $`|\operatorname{Tr}W|^2`$ on all complex matrices. Its identity component contributes one, leaving the displayed character on the traceless subspace. Therefore
+Indeed, conjugation by $`W`$ has superoperator trace $`|\mathrm{Tr}W|^2`$ on all complex matrices. Its identity component contributes one, leaving the displayed character on the traceless subspace. Therefore
 
 ```math
-\operatorname{Tr}
+\mathrm{Tr}
 \bigl[\mathcal R(V)^T\mathcal R(U)\bigr]
 =p-d^2L(U,V),
 ```
@@ -87,7 +87,7 @@ Indeed, conjugation by $`W`$ has superoperator trace $`|\operatorname{Tr}W|^2`$ 
 and
 
 ```math
-\|\mathcal R(V)-\mathcal R(U)\|_F^2
+\Vert \mathcal R(V)-\mathcal R(U)\Vert _F^2
 =
 2d^2L(U,V).
 ```
@@ -108,7 +108,7 @@ f(e^{itT_a}U)\right|_{t=0}.
 For any matrix $`B`$, completeness of the generator basis gives
 
 ```math
-\sum_{a=1}^p T_aBT_a=d\,\operatorname{Tr}(B)I-B,
+\sum_{a=1}^p T_aBT_a=d\,\mathrm{Tr}(B)I-B,
 \qquad
 \sum_{a=1}^pT_a^2=pI.
 ```
@@ -134,7 +134,7 @@ The tangent matrices are orthogonal:
 C\delta_{ab}.
 ```
 
-One way to check the normalization is to compute the Hilbert–Schmidt superoperator norm of $`B\mapsto i[H,B]`$. For traceless $`H`$ its squared norm is $`2d\operatorname{Tr}(H^2)`$. Taking $`H=T_a`$ gives $`C=2d^2`$, and polarization gives the cross terms.
+One way to check the normalization is to compute the Hilbert–Schmidt superoperator norm of $`B\mapsto i[H,B]`$. For traceless $`H`$ its squared norm is $`2d\mathrm{Tr}(H^2)`$. Taking $`H=T_a`$ gives $`C=2d^2`$, and polarization gives the cross terms.
 
 ## 3. Haar integration by parts
 
@@ -160,12 +160,12 @@ and then summing over $`a`$ gives
 \mathbb E\sum_a
 S_a\langle E,X_a\mathcal R\rangle_F
 &=
-\mathbb E\sum_a\|X_a\mathcal R\|_F^2
+\mathbb E\sum_a\Vert X_a\mathcal R\Vert _F^2
 -\mathbb E\left\langle E,\sum_aX_a^2\mathcal R\right\rangle_F\\
 &=
 Cp+C\,\mathbb E\langle E,\mathcal R\rangle_F\\
 &=
-C\,\mathbb E\operatorname{Tr}
+C\,\mathbb E\mathrm{Tr}
 \bigl[\mathcal R(\widehat U)^T\mathcal R(U)\bigr]\\
 &=
 C(p-d^2R_N).
@@ -183,7 +183,7 @@ The tangent orthogonality from step 2 implies a projection bound:
 ```math
 \sum_a\langle E,X_a\mathcal R\rangle_F^2
 \leq
-C\|E\|_F^2
+C\Vert E\Vert _F^2
 =
 2Cd^2L(U,\widehat U).
 ```
@@ -194,7 +194,7 @@ Consequently,
 \begin{aligned}
 C^2(p-d^2R_N)^2
 &\leq
-\mathbb E\|S\|^2\;
+\mathbb E\Vert S\Vert ^2\;
 \mathbb E\sum_a\langle E,X_a\mathcal R\rangle_F^2\\
 &\leq
 NK\,2Cd^2R_N.
@@ -208,10 +208,10 @@ Since $`C=2d^2`$, cancellation yields the stated bound.
 For SEP or PAIR, write the likelihood as the product of conditional likelihoods of successive pair outcomes. At a fixed target the total score is the sum of the conditional scores. Each conditional score has zero conditional mean, so cross terms vanish:
 
 ```math
-\mathbb E_U\|S_N\|^2
+\mathbb E_U\Vert S_N\Vert ^2
 =
 \sum_{t=1}^N
-\mathbb E_U\|S_t^{\mathrm{conditional}}\|^2
+\mathbb E_U\Vert S_t^{\mathrm{conditional}}\Vert ^2
 \leq NK.
 ```
 
@@ -229,7 +229,7 @@ These statements use independent supplied examples and the access model in [mode
 
 ## Consequence and scope
 
-For fixed $`d`$ and $`0<v<1`$, the bound is valid for every sample size and every biased estimator in the stated class. It gives the sharp leading coefficient once matched by the respective attainability construction.
+For fixed $`d`$ and $`0\lt v\lt 1`$, the bound is valid for every sample size and every biased estimator in the stated class. It gives the sharp leading coefficient once matched by the respective attainability construction.
 
 At fixed target error it also gives dimension-dependent sample lower bounds. A dimension-uniform matching collective upper bound at that error is a different assertion and is not inferred from fixed-dimensional asymptotic attainability.
 

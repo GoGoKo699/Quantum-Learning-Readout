@@ -8,7 +8,7 @@ The source is the full-rank separable family
 
 ```math
 \rho_{U,v}=\frac{I+vF_U}{d(d+v)},\qquad
-F_U=(I\otimes U)F(I\otimes U^\dagger),\qquad 0<v<1,
+F_U=(I\otimes U)F(I\otimes U^\dagger),\qquad 0\lt v\lt 1,
 ```
 
 where $`F`$ swaps two $`d`$-dimensional registers and $`v`$ is known. The learner outputs a classical unitary estimate. For Haar-average gate infidelity and $`p=d^2-1`$, the optimal risk satisfies $`R_N=C/N+o_{d,v}(N^{-1})`$:
@@ -39,6 +39,10 @@ Start with the [scientific route](science/README.md). The account joins sharp me
 | Which results are inherited? | [Related work](references/related_work.md) and [bibliography](references/references.bib) |
 
 For example, at $`d=2`$ and $`v=1/2`$, the three coefficients are $`5`$, $`12.5`$ and $`37.5`$. These numbers compare the leading precision costs; they are not finite-sample error predictions for an arbitrary small budget.
+
+## Learn the framework
+
+The [learning route](learning/README.md) connects the selected 2020 review by Demkowicz-Dobrzański, Górecki and Guţă to this experiment. Use the [30-milestone map](learning/MILESTONES.md), [source bridge](learning/ANCHOR_BRIDGE.md) and [worked tutorial](learning/TUTORIAL.md) to move from estimation concepts to the complete three-tier result.
 
 ## Reproduce the finite checks
 

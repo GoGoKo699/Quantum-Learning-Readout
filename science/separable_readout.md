@@ -2,7 +2,7 @@
 
 A separable measurement can be more general than a measurement chosen in advance on each register. The converse here covers every separable-effect POVM on one pair, including arbitrary per-pair LOCC and measurements chosen adaptively from earlier classical outcomes.
 
-The [model](model.md) fixes $`d\geq2`$, $`0<v<1`$, and the normalization $`\operatorname{Tr}(T_aT_b)=d\delta_{ab}`$.
+The [model](model.md) fixes $`d\geq2`$, $`0\lt v\lt 1`$, and the normalization $`\mathrm{Tr}(T_aT_b)=d\delta_{ab}`$.
 
 ## The sharp one-pair ceiling
 
@@ -10,7 +10,7 @@ For every separable-effect POVM on one supplied pair, its classical Fisher matri
 
 ```math
 \boxed{
-\operatorname{Tr}I(U)
+\mathrm{Tr}I(U)
 \leq
 K_{\mathrm{SEP}}
 =
@@ -74,7 +74,7 @@ POVM completeness gives two useful identities:
 ```math
 \sum_z w_z=d^2,
 \qquad
-\sum_z w_zt_z=\operatorname{Tr}F_U=d.
+\sum_z w_zt_z=\mathrm{Tr}F_U=d.
 ```
 
 The second identity holds even though the individual overlaps depend on the unknown target.
@@ -86,7 +86,7 @@ Let $`P_\phi=U|a\rangle\langle a|U^\dagger`$ and $`P_b=|b\rangle\langle b|`$. Up
 ```math
 \sum_{a=1}^p(X_at)^2
 =
-d\,\operatorname{Tr}\!\left((i[P_\phi,P_b])^2\right)
+d\,\mathrm{Tr}\!\left((i[P_\phi,P_b])^2\right)
 =
 2dt(1-t).
 ```
@@ -95,7 +95,7 @@ Consequently,
 
 ```math
 \begin{aligned}
-\operatorname{Tr}I(U)
+\mathrm{Tr}I(U)
 &=
 \sum_z\frac{\sum_a(X_aq_z)^2}{q_z}\\
 &=
@@ -110,7 +110,7 @@ Define
 ```math
 f_v(t)=\frac{t(1-t)}{1+vt},
 \qquad
-f_v''(t)=-\frac{2(1+v)}{(1+vt)^3}<0.
+f_v''(t)=-\frac{2(1+v)}{(1+vt)^3}\lt 0.
 ```
 
 The weighted average overlap is $`1/d`$. Jensen's inequality therefore gives
@@ -158,12 +158,12 @@ This is a normalized projective measurement for every sampled $`W`$. It has no p
 
 ## 4. What measuring the first register does
 
-For an arbitrary effect $`E`$ on $`A`$, its probability is $`\operatorname{Tr}E/d`$, independently of the target. Conditional on that outcome, the second register has state
+For an arbitrary effect $`E`$ on $`A`$, its probability is $`\mathrm{Tr}E/d`$, independently of the target. Conditional on that outcome, the second register has state
 
 ```math
 \rho_{B|E,U}
 =
-\frac{I+v\,U(E/\operatorname{Tr}E)U^\dagger}{d+v}.
+\frac{I+v\,U(E/\mathrm{Tr}E)U^\dagger}{d+v}.
 ```
 
 In particular, a rank-one outcome $`|\psi\rangle\langle\psi|`$ leaves the known-direction mixture
@@ -174,7 +174,7 @@ In particular, a rank-one outcome $`|\psi\rangle\langle\psi|`$ leaves the known-
 \frac{I+v\,U|\psi\rangle\langle\psi|U^\dagger}{d+v}.
 ```
 
-This follows from $`\operatorname{Tr}_A[(E\otimes I)F]=E`$; no transpose appears. The direction $`\psi`$ is specified by the learner's measurement outcome, not by disclosure of the source seed. The output is strongly mixed. Treating it as an undiluted known-input probe would change the statistical model.
+This follows from $`\mathrm{Tr}_A[(E\otimes I)F]=E`$; no transpose appears. The direction $`\psi`$ is specified by the learner's measurement outcome, not by disclosure of the source seed. The output is strongly mixed. Treating it as an undiluted known-input probe would change the statistical model.
 
 ## 5. Global fixed-dimensional attainability
 
@@ -185,7 +185,7 @@ Here is an explicit route from the centered design to a global estimator. It als
 Use $`m=\lfloor N^{3/4}\rfloor`$ examples for a fixed finite product informationally complete POVM on $`A:B`$. Linear reconstruction gives an estimate $`\widetilde\sigma`$ whose finite moments satisfy, at fixed dimension,
 
 ```math
-\mathbb E\|\widetilde\sigma-\sigma_{U,v}\|_2^{2q}
+\mathbb E\Vert \widetilde\sigma-\sigma_{U,v}\Vert _2^{2q}
 =
 O(m^{-q})
 ```
@@ -195,7 +195,7 @@ for each fixed integer $`q`$. These are bounded finite-outcome sample averages, 
 Choose a nearest model state $`\sigma_{U_0,v}`$ in Hilbert–Schmidt distance. A minimizer exists by compactness. The exact identity
 
 ```math
-\|\sigma_{U,v}-\sigma_{V,v}\|_2^2
+\Vert \sigma_{U,v}-\sigma_{V,v}\Vert _2^2
 =
 \frac{2v^2}{(d+v)^2}L(U,V)
 ```
@@ -208,7 +208,7 @@ U_0^\dagger U
 \exp\left(i\sum_a\theta_{0,a}T_a\right).
 ```
 
-Then $`\mathbb E\|\theta_0\|^{2q}=O(m^{-q})`$ on that neighborhood. The probability of being outside it is $`O(m^{-q})`$ for any chosen fixed $`q`$. In particular, its bounded-loss contribution is $`o(1/N)`$ when $`q\geq2`$.
+Then $`\mathbb E\Vert \theta_0\Vert ^{2q}=O(m^{-q})`$ on that neighborhood. The probability of being outside it is $`O(m^{-q})`$ for any chosen fixed $`q`$. In particular, its bounded-loss contribution is $`o(1/N)`$ when $`q\geq2`$.
 
 The pilot is an existence construction with ordinary classical processing. Efficient global fitting and its gate costs are not included in the sample coefficient.
 
@@ -228,23 +228,23 @@ The source is full rank. At fixed $`d,v`$, its likelihoods and their derivatives
 ```math
 \mathbb E_{\theta_0}s_0
 =
-k_{\mathrm{SEP}}\theta_0+O(\|\theta_0\|^2),
+k_{\mathrm{SEP}}\theta_0+O(\Vert \theta_0\Vert ^2),
 \qquad
-\operatorname{Cov}_{\theta_0}(s_0)
+\mathrm{Cov}_{\theta_0}(s_0)
 =
-k_{\mathrm{SEP}}I_p+O(\|\theta_0\|).
+k_{\mathrm{SEP}}I_p+O(\Vert \theta_0\Vert ).
 ```
 
 It follows that
 
 ```math
-\mathbb E\|\widetilde\theta-\theta_0\|^2
+\mathbb E\Vert \widetilde\theta-\theta_0\Vert ^2
 =
 \frac{p}{N_2k_{\mathrm{SEP}}}
 +
-O\left(\frac{\mathbb E\|\theta_0\|}{N_2}\right)
+O\left(\frac{\mathbb E\Vert \theta_0\Vert }{N_2}\right)
 +
-O\bigl(\mathbb E\|\theta_0\|^4\bigr).
+O\bigl(\mathbb E\Vert \theta_0\Vert ^4\bigr).
 ```
 
 The last two terms are $`o(1/N)`$: the pilot is consistent and $`N/m^2\to0`$. One may truncate the estimate to a fixed local ball to control exceptional outcomes. Bounded score moments and the pilot's higher-moment bounds make the resulting risk correction $`o(1/N)`$.
@@ -263,7 +263,7 @@ The local expansion of the stipulated loss is
 \ell(U,\widehat U)
 =
 \frac{d}{d+1}
-\|\widetilde\theta-\theta_0\|^2
+\Vert \widetilde\theta-\theta_0\Vert ^2
 +
 \text{a remainder whose expectation is }o(1/N).
 ```
