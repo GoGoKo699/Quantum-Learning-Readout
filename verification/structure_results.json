@@ -1,6 +1,6 @@
 {
   "status": "pass",
-  "checked_local_links": 44,
+  "checked_local_links": 184,
   "errors": [],
-  "scope": "All current Markdown files; destination existence and math delimiter balance. Hosted rendering not inspected."
+  "scope": "All current Markdown files; relative destination and heading-fragment existence, and fenced-block balance. This is a source check; actual hosted review has separate evidence."
 }
