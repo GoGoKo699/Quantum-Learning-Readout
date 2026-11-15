@@ -7,7 +7,7 @@ The [model](model.md) fixes the source, the three readout classes, the loss, and
 ```math
 p=d^2-1,
 \qquad
-\operatorname{Tr}(T_aT_b)=d\delta_{ab},
+\mathrm{Tr}(T_aT_b)=d\delta_{ab},
 \qquad
 R_N=\mathbb E\,L(U,\widehat U).
 ```
@@ -63,23 +63,23 @@ Let $`\mathcal R(U)`$ be the adjoint representation on the real vector space of 
 ```math
 \mathcal R(U)_{ab}
 =
-\frac1d\operatorname{Tr}
+\frac1d\mathrm{Tr}
 \bigl(T_aUT_bU^\dagger\bigr).
 ```
 
 It is a real orthogonal $`p\times p`$ matrix and is insensitive to global phase. For $`W=V^\dagger U`$,
 
 ```math
-\operatorname{Tr}
+\mathrm{Tr}
 \bigl[\mathcal R(V)^T\mathcal R(U)\bigr]
 =
-|\operatorname{Tr}W|^2-1.
+|\mathrm{Tr}W|^2-1.
 ```
 
-Indeed, conjugation by $`W`$ has superoperator trace $`|\operatorname{Tr}W|^2`$ on all complex matrices. Its identity component contributes one, leaving the displayed character on the traceless subspace. Therefore
+Indeed, conjugation by $`W`$ has superoperator trace $`|\mathrm{Tr}W|^2`$ on all complex matrices. Its identity component contributes one, leaving the displayed character on the traceless subspace. Therefore
 
 ```math
-\operatorname{Tr}
+\mathrm{Tr}
 \bigl[\mathcal R(V)^T\mathcal R(U)\bigr]
 =p-d^2L(U,V),
 ```
@@ -108,7 +108,7 @@ f(e^{itT_a}U)\right|_{t=0}.
 For any matrix $`B`$, completeness of the generator basis gives
 
 ```math
-\sum_{a=1}^p T_aBT_a=d\,\operatorname{Tr}(B)I-B,
+\sum_{a=1}^p T_aBT_a=d\,\mathrm{Tr}(B)I-B,
 \qquad
 \sum_{a=1}^pT_a^2=pI.
 ```
@@ -134,7 +134,7 @@ The tangent matrices are orthogonal:
 C\delta_{ab}.
 ```
 
-One way to check the normalization is to compute the Hilbert–Schmidt superoperator norm of $`B\mapsto i[H,B]`$. For traceless $`H`$ its squared norm is $`2d\operatorname{Tr}(H^2)`$. Taking $`H=T_a`$ gives $`C=2d^2`$, and polarization gives the cross terms.
+One way to check the normalization is to compute the Hilbert–Schmidt superoperator norm of $`B\mapsto i[H,B]`$. For traceless $`H`$ its squared norm is $`2d\mathrm{Tr}(H^2)`$. Taking $`H=T_a`$ gives $`C=2d^2`$, and polarization gives the cross terms.
 
 ## 3. Haar integration by parts
 
@@ -165,7 +165,7 @@ S_a\langle E,X_a\mathcal R\rangle_F
 &=
 Cp+C\,\mathbb E\langle E,\mathcal R\rangle_F\\
 &=
-C\,\mathbb E\operatorname{Tr}
+C\,\mathbb E\mathrm{Tr}
 \bigl[\mathcal R(\widehat U)^T\mathcal R(U)\bigr]\\
 &=
 C(p-d^2R_N).

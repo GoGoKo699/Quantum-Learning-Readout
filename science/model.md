@@ -53,7 +53,7 @@ After $`N`$ examples the learner returns a classical description of an estimate 
 1-|\langle\varphi|\widehat U^\dagger U|\varphi\rangle|^2
 \right)d\varphi
 =
-\frac{d^2-|\operatorname{Tr}(\widehat U^\dagger U)|^2}
+\frac{d^2-|\mathrm{Tr}(\widehat U^\dagger U)|^2}
 {d(d+1)}.
 ```
 
@@ -62,7 +62,7 @@ It is useful to distinguish the process loss
 ```math
 L(U,\widehat U)
 =
-1-\frac{|\operatorname{Tr}(\widehat U^\dagger U)|^2}{d^2},
+1-\frac{|\mathrm{Tr}(\widehat U^\dagger U)|^2}{d^2},
 \qquad
 \ell=\frac{d}{d+1}L.
 ```
@@ -106,7 +106,7 @@ Their dimension dependence can then be inspected. The result is not a dimension-
 Put $`p=d^2-1`$. Use traceless Hermitian generators $`T_a`$ normalized by
 
 ```math
-\operatorname{Tr}(T_aT_b)=d\,\delta_{ab},
+\mathrm{Tr}(T_aT_b)=d\,\delta_{ab},
 \qquad a,b=1,\ldots,p.
 ```
 

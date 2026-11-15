@@ -40,6 +40,10 @@ Start with the [scientific route](science/README.md). The account joins sharp me
 
 For example, at $`d=2`$ and $`v=1/2`$, the three coefficients are $`5`$, $`12.5`$ and $`37.5`$. These numbers compare the leading precision costs; they are not finite-sample error predictions for an arbitrary small budget.
 
+## Learn the framework
+
+The [learning route](learning/README.md) connects the selected 2020 review by Demkowicz-Dobrzański, Górecki and Guţă to this experiment. Use the [30-milestone map](learning/MILESTONES.md), [source bridge](learning/ANCHOR_BRIDGE.md) and [worked tutorial](learning/TUTORIAL.md) to move from estimation concepts to the complete three-tier result.
+
 ## Reproduce the finite checks
 
 ```bash

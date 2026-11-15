@@ -2,7 +2,7 @@
 
 A separable measurement can be more general than a measurement chosen in advance on each register. The converse here covers every separable-effect POVM on one pair, including arbitrary per-pair LOCC and measurements chosen adaptively from earlier classical outcomes.
 
-The [model](model.md) fixes $`d\geq2`$, $`0<v<1`$, and the normalization $`\operatorname{Tr}(T_aT_b)=d\delta_{ab}`$.
+The [model](model.md) fixes $`d\geq2`$, $`0<v<1`$, and the normalization $`\mathrm{Tr}(T_aT_b)=d\delta_{ab}`$.
 
 ## The sharp one-pair ceiling
 
@@ -10,7 +10,7 @@ For every separable-effect POVM on one supplied pair, its classical Fisher matri
 
 ```math
 \boxed{
-\operatorname{Tr}I(U)
+\mathrm{Tr}I(U)
 \leq
 K_{\mathrm{SEP}}
 =
@@ -74,7 +74,7 @@ POVM completeness gives two useful identities:
 ```math
 \sum_z w_z=d^2,
 \qquad
-\sum_z w_zt_z=\operatorname{Tr}F_U=d.
+\sum_z w_zt_z=\mathrm{Tr}F_U=d.
 ```
 
 The second identity holds even though the individual overlaps depend on the unknown target.
@@ -86,7 +86,7 @@ Let $`P_\phi=U|a\rangle\langle a|U^\dagger`$ and $`P_b=|b\rangle\langle b|`$. Up
 ```math
 \sum_{a=1}^p(X_at)^2
 =
-d\,\operatorname{Tr}\!\left((i[P_\phi,P_b])^2\right)
+d\,\mathrm{Tr}\!\left((i[P_\phi,P_b])^2\right)
 =
 2dt(1-t).
 ```
@@ -95,7 +95,7 @@ Consequently,
 
 ```math
 \begin{aligned}
-\operatorname{Tr}I(U)
+\mathrm{Tr}I(U)
 &=
 \sum_z\frac{\sum_a(X_aq_z)^2}{q_z}\\
 &=
@@ -158,12 +158,12 @@ This is a normalized projective measurement for every sampled $`W`$. It has no p
 
 ## 4. What measuring the first register does
 
-For an arbitrary effect $`E`$ on $`A`$, its probability is $`\operatorname{Tr}E/d`$, independently of the target. Conditional on that outcome, the second register has state
+For an arbitrary effect $`E`$ on $`A`$, its probability is $`\mathrm{Tr}E/d`$, independently of the target. Conditional on that outcome, the second register has state
 
 ```math
 \rho_{B|E,U}
 =
-\frac{I+v\,U(E/\operatorname{Tr}E)U^\dagger}{d+v}.
+\frac{I+v\,U(E/\mathrm{Tr}E)U^\dagger}{d+v}.
 ```
 
 In particular, a rank-one outcome $`|\psi\rangle\langle\psi|`$ leaves the known-direction mixture
@@ -174,7 +174,7 @@ In particular, a rank-one outcome $`|\psi\rangle\langle\psi|`$ leaves the known-
 \frac{I+v\,U|\psi\rangle\langle\psi|U^\dagger}{d+v}.
 ```
 
-This follows from $`\operatorname{Tr}_A[(E\otimes I)F]=E`$; no transpose appears. The direction $`\psi`$ is specified by the learner's measurement outcome, not by disclosure of the source seed. The output is strongly mixed. Treating it as an undiluted known-input probe would change the statistical model.
+This follows from $`\mathrm{Tr}_A[(E\otimes I)F]=E`$; no transpose appears. The direction $`\psi`$ is specified by the learner's measurement outcome, not by disclosure of the source seed. The output is strongly mixed. Treating it as an undiluted known-input probe would change the statistical model.
 
 ## 5. Global fixed-dimensional attainability
 
@@ -230,7 +230,7 @@ The source is full rank. At fixed $`d,v`$, its likelihoods and their derivatives
 =
 k_{\mathrm{SEP}}\theta_0+O(\|\theta_0\|^2),
 \qquad
-\operatorname{Cov}_{\theta_0}(s_0)
+\mathrm{Cov}_{\theta_0}(s_0)
 =
 k_{\mathrm{SEP}}I_p+O(\|\theta_0\|).
 ```

@@ -11,7 +11,7 @@ F_U=(I\otimes U)F(I\otimes U^\dagger).
 The unknown parameter is a projective unitary $`U\in\mathrm{PU}(d)`$. Each independent example is one supplied pair; its preparation record is unavailable. The loss is average gate infidelity,
 
 ```math
-r(U,V)=\frac{d^2-|\operatorname{Tr}(U^\dagger V)|^2}{d(d+1)}.
+r(U,V)=\frac{d^2-|\mathrm{Tr}(U^\dagger V)|^2}{d(d+1)}.
 ```
 
 The collective class may retain and jointly measure different pairs. Its optimal Haar Bayes risk and optimal worst-case risk have the same coefficient:
@@ -26,7 +26,7 @@ Here $`d`$ and $`v`$ are fixed before $`N\to\infty`$. The proof gives an asympto
 
 ## The local information matrix
 
-Choose traceless Hermitian generators $`H_1,\ldots,H_p`$ normalized by $`\operatorname{Tr}(H_aH_b)=d\delta_{ab}`$, and use the coordinates
+Choose traceless Hermitian generators $`H_1,\ldots,H_p`$ normalized by $`\mathrm{Tr}(H_aH_b)=d\delta_{ab}`$, and use the coordinates
 
 ```math
 U(\theta)=\exp\!\left(-i\sum_{a=1}^p\theta_aH_a\right).
@@ -51,20 +51,20 @@ For an explicit Gram calculation, define $`D_a=I\otimes H_a-H_a\otimes I`$. The 
 ```math
 L_aL_b=v^2D_aD_b,
 \qquad
-\operatorname{Tr}(D_aD_b)=2d^2\delta_{ab},
+\mathrm{Tr}(D_aD_b)=2d^2\delta_{ab},
 \qquad
-\operatorname{Tr}(FD_aD_b)=0.
+\mathrm{Tr}(FD_aD_b)=0.
 ```
 
 It follows that the entire complex SLD Gram matrix is real:
 
 ```math
-\operatorname{Tr}(\rho L_aL_b)=j\delta_{ab},
+\mathrm{Tr}(\rho L_aL_b)=j\delta_{ab},
 \qquad
 j=\frac{2dv^2}{d+v}.
 ```
 
-In particular $`\operatorname{Tr}(\rho[L_a,L_b])=0`$. The SLD operators need not commute. The distinction between operator commutation and vanishing mean commutators is the standard asymptotically classical distinction discussed in [Suzuki2019](../references/related_work.md#suzuki2019).
+In particular $`\mathrm{Tr}(\rho[L_a,L_b])=0`$. The SLD operators need not commute. The distinction between operator commutation and vanishing mean commutators is the standard asymptotically classical distinction discussed in [Suzuki2019](../references/related_work.md#suzuki2019).
 
 The loss has the local expansion
 
@@ -81,11 +81,11 @@ Thus its local quadratic weight is $`W=wI_p`$.
 The SLD bound for this weight is $`wp/j`$. It is also the Holevo value. To see this directly, use the dual operators $`X_a=L_a/j`$. They satisfy
 
 ```math
-\operatorname{Tr}(\rho X_a)=0,
+\mathrm{Tr}(\rho X_a)=0,
 \qquad
-\operatorname{Tr}((\partial_b\rho)X_a)=\delta_{ab},
+\mathrm{Tr}((\partial_b\rho)X_a)=\delta_{ab},
 \qquad
-\operatorname{Tr}(\rho X_aX_b)=\frac{\delta_{ab}}j.
+\mathrm{Tr}(\rho X_aX_b)=\frac{\delta_{ab}}j.
 ```
 
 They are feasible in the Holevo optimization, and their imaginary covariance vanishes. The Holevo objective evaluated at them is therefore $`wp/j`$. The SLD lower bound gives the reverse inequality, proving
@@ -194,7 +194,7 @@ An exact identity converts this state error into unitary error:
 =\frac{2v^2(d+1)}{d(d+v)^2}\,r(U,V).
 ```
 
-Indeed $`F_U^2=F_V^2=I`$ and $`\operatorname{Tr}(F_UF_V)=|\operatorname{Tr}(U^\dagger V)|^2`$.
+Indeed $`F_U^2=F_V^2=I`$ and $`\mathrm{Tr}(F_UF_V)=|\mathrm{Tr}(U^\dagger V)|^2`$.
 
 Let $`\Delta(U,V)`$ be a fixed bi-invariant geodesic distance on $`\mathrm{PU}(d)`$, normalized to agree with $`\|\theta\|`$ in the local coordinates at identity. On this compact group, $`\Delta^2`$ and $`r`$ are comparable, with constants depending on $`d`$. Bounded-outcome concentration for the finite informationally complete measurement, the fit inequality, and the exact identity give
 
