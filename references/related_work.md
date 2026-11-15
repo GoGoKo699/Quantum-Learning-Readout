@@ -2,7 +2,7 @@
 
 The contribution is an exact readout hierarchy for learning the same unknown unitary from the same supplied, full-rank separable source. It is not the discovery that separable probes can identify a channel, that Werner states have quantum Fisher information, or that coherent measurements can improve estimation.
 
-For fixed $`d\geq2`$ and known $`0<v<1`$, the source is $`\rho_U(v)=(I+vF_U)/[d(d+v)]`$, where $`F_U=(I\otimes U)F(I\otimes U^\dagger)`$. The unknown parameter is the complete unitary modulo phase. Under Haar-average gate infidelity and $`p=d^2-1`$, the three global minimax risks have the fixed-dimension precision coefficients
+For fixed $`d\geq2`$ and known $`0\lt v\lt 1`$, the source is $`\rho_U(v)=(I+vF_U)/[d(d+v)]`$, where $`F_U=(I\otimes U)F(I\otimes U^\dagger)`$. The unknown parameter is the complete unitary modulo phase. Under Haar-average gate infidelity and $`p=d^2-1`$, the three global minimax risks have the fixed-dimension precision coefficients
 
 ```math
 \begin{aligned}

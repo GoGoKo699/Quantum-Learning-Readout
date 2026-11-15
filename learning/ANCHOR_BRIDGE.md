@@ -78,7 +78,7 @@ The SLDs still need not commute. The value is a collective asymptotic benchmark,
 
 ## Read the final coefficients with their quantifiers
 
-For every fixed $`d\ge2`$ and fixed known $`0<v<1`$,
+For every fixed $`d\ge2`$ and fixed known $`0\lt v\lt 1`$,
 
 ```math
 \begin{aligned}

@@ -15,7 +15,7 @@ The [tutorial](TUTORIAL.md) develops the continuing example. The [30 project mil
 5. Read [collective attainment](../science/collective_attainment.md). Keep the local Holevo calculation, the local theorem and the unknown-center globalization as distinct proof steps.
 6. Finish with [resources](../science/resources.md) and [related work](../references/related_work.md). Identify the implementation costs left outside a sample coefficient and the earlier results used by the proof.
 
-The common destination is the same in every step: a classical estimate $`\widehat U\in\mathrm{PU}(d)`$ of an arbitrary fixed unitary. The theorem takes $`N\to\infty`$ at fixed $`d\ge2`$ and known $`0<v<1`$. A comparison of the resulting coefficients as dimension grows preserves that order of limits.
+The common destination is the same in every step: a classical estimate $`\widehat U\in\mathrm{PU}(d)`$ of an arbitrary fixed unitary. The theorem takes $`N\to\infty`$ at fixed $`d\ge2`$ and known $`0\lt v\lt 1`$. A comparison of the resulting coefficients as dimension grows preserves that order of limits.
 
 ## Three distinctions to keep visible
 

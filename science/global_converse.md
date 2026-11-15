@@ -229,7 +229,7 @@ These statements use independent supplied examples and the access model in [mode
 
 ## Consequence and scope
 
-For fixed $`d`$ and $`0<v<1`$, the bound is valid for every sample size and every biased estimator in the stated class. It gives the sharp leading coefficient once matched by the respective attainability construction.
+For fixed $`d`$ and $`0\lt v\lt 1`$, the bound is valid for every sample size and every biased estimator in the stated class. It gives the sharp leading coefficient once matched by the respective attainability construction.
 
 At fixed target error it also gives dimension-dependent sample lower bounds. A dimension-uniform matching collective upper bound at that error is a different assertion and is not inferred from fixed-dimensional asymptotic attainability.
 

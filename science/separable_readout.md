@@ -2,7 +2,7 @@
 
 A separable measurement can be more general than a measurement chosen in advance on each register. The converse here covers every separable-effect POVM on one pair, including arbitrary per-pair LOCC and measurements chosen adaptively from earlier classical outcomes.
 
-The [model](model.md) fixes $`d\geq2`$, $`0<v<1`$, and the normalization $`\mathrm{Tr}(T_aT_b)=d\delta_{ab}`$.
+The [model](model.md) fixes $`d\geq2`$, $`0\lt v\lt 1`$, and the normalization $`\mathrm{Tr}(T_aT_b)=d\delta_{ab}`$.
 
 ## The sharp one-pair ceiling
 

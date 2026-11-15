@@ -4,7 +4,7 @@ An unknown unitary acts on the second member of a fresh pair of quantum examples
 
 ## The supplied examples
 
-Fix an integer $`d\geq2`$ and a known correlation parameter $`0<v<1`$. Write $`F|a\rangle|b\rangle=|b\rangle|a\rangle`$ for the swap operator. The unknown target is a fixed unitary modulo phase, $`U\in\mathrm{PU}(d)`$; global phase is unobservable. One supplied example is
+Fix an integer $`d\geq2`$ and a known correlation parameter $`0\lt v\lt 1`$. Write $`F|a\rangle|b\rangle=|b\rangle|a\rangle`$ for the swap operator. The unknown target is a fixed unitary modulo phase, $`U\in\mathrm{PU}(d)`$; global phase is unobservable. One supplied example is
 
 ```math
 \sigma_{U,v}

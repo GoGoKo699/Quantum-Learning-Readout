@@ -11,5 +11,5 @@ Read [the model](model.md) first. It fixes the source, gate loss, three acquisit
 
 [Interpretation](interpretation.md) explains the two successive gains and a small example. [Resources](resources.md) separates source count, quantum retention, actual POVM implementation and the classical output. [Related work](../references/related_work.md) states which foundations are inherited and which operational comparison is added.
 
-The limiting order is part of the theorem: $`N\to\infty`$ at each fixed $`d`$ and fixed $`0<v<1`$. The collective construction does not supply a useful uniform burn-in bound as dimension grows. The output is a classical unitary estimate, rather than an arbitrary channel hypothesis or a consumable quantum model.
+The limiting order is part of the theorem: $`N\to\infty`$ at each fixed $`d`$ and fixed $`0\lt v\lt 1`$. The collective construction does not supply a useful uniform burn-in bound as dimension grows. The output is a classical unitary estimate, rather than an arbitrary channel hypothesis or a consumable quantum model.
 

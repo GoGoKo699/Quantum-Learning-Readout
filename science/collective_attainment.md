@@ -1,6 +1,6 @@
 # Collective attainment
 
-This page establishes the optimal collective precision coefficient for the full-rank source family in the [model](model.md). Fix $`d\ge2`$ and a known $`0<v<1`$, and write
+This page establishes the optimal collective precision coefficient for the full-rank source family in the [model](model.md). Fix $`d\ge2`$ and a known $`0\lt v\lt 1`$, and write
 
 ```math
 Z=d(d+v),\qquad p=d^2-1,\qquad
@@ -101,7 +101,7 @@ This calculation evaluates a local estimation bound. The global conclusion also 
 
 We use Theorem 3.1 of [YFG2013](../references/related_work.md#yfg2013). For a smooth finite-dimensional quantum model, it gives local-shift estimators attaining the Holevo value at every shift in any chosen countable dense subset of the local parameter space. Its hypotheses require mutual absolute continuity near the reference point and differentiability of the quantum log-likelihood ratio around zero, with a second derivative at zero.
 
-Those hypotheses hold here. Both eigenvalues $`(1+v)/Z`$ and $`(1-v)/Z`$ are strictly positive. The map $`\theta\mapsto\rho_{U(\theta)}(v)`$ and its full-rank quantum log-likelihood ratio are smooth, and the derivatives are independent because $`j>0`$. The theorem permits repeated eigenvalues. This matters because the symmetric and antisymmetric eigenspaces have multiplicities.
+Those hypotheses hold here. Both eigenvalues $`(1+v)/Z`$ and $`(1-v)/Z`$ are strictly positive. The map $`\theta\mapsto\rho_{U(\theta)}(v)`$ and its full-rank quantum log-likelihood ratio are smooth, and the derivatives are independent because $`j\gt 0`$. The theorem permits repeated eigenvalues. This matters because the symmetric and antisymmetric eigenspaces have multiplicities.
 
 For $`q`$ copies, let $`\widehat h_q`$ denote a local estimator centered at identity. Applied to
 
@@ -121,7 +121,7 @@ The second statement follows from its mean and covariance conclusions, using $`W
 
 ## Uniform local control after clipping
 
-Fix a radius $`R>0`$. Project $`\widehat h_q`$ onto the Euclidean ball of radius $`2R`$, obtaining $`\widehat h_{q,R}`$. For $`\|h\|\le R`$, this projection cannot increase squared error to $`h`$. Hence, at each dense-set point in that ball,
+Fix a radius $`R\gt 0`$. Project $`\widehat h_q`$ onto the Euclidean ball of radius $`2R`$, obtaining $`\widehat h_{q,R}`$. For $`\|h\|\le R`$, this projection cannot increase squared error to $`h`$. Hence, at each dense-set point in that ball,
 
 ```math
 \limsup_{q\to\infty}
@@ -161,7 +161,7 @@ Fidelity multiplies under tensor products. The Fuchs–van de Graaf inequality t
 
 After clipping, the squared loss is at most $`9R^2`$ for $`h`$ in the radius-$`R`$ ball. Changing $`h`$ changes that bounded loss continuously as well. The displayed trace-distance estimate thus gives an equicontinuity bound for the risk functions, with a constant depending on $`R,d,v`$ and not on $`q`$.
 
-For any $`\eta>0`$, take a finite sufficiently fine net of dense-set points in the ball. Pointwise convergence at those finitely many points and equicontinuity imply that, for all sufficiently large $`q`$,
+For any $`\eta\gt 0`$, take a finite sufficiently fine net of dense-set points in the ball. Pointwise convergence at those finitely many points and equicontinuity imply that, for all sufficiently large $`q`$,
 
 ```math
 \sup_{\|h\|\le R}
@@ -267,7 +267,7 @@ Put $`D=\Delta(\widehat U_0,U)`$ and $`a=R^2/q`$. Integrating the pilot tail giv
 \exp(-b_{d,v}ma),
 ```
 
-with an additional exponentially small term in $`m`$ if the small-distance form of the tail is used. This is the identity $`\mathbb E[Z\mathbf1\{Z>a\}]=a\Pr(Z>a)+\int_a^\infty\Pr(Z>x)\,dx`$ applied to $`Z=D^2`$.
+with an additional exponentially small term in $`m`$ if the small-distance form of the tail is used. This is the identity $`\mathbb E[Z\mathbf1\{Z\gt a\}]=a\Pr(Z\gt a)+\int_a^\infty\Pr(Z\gt x)\,dx`$ applied to $`Z=D^2`$.
 
 The final output is within $`O(R/\sqrt q)`$ of the pilot, regardless of pilot success. The triangle inequality and the global upper comparison of gate loss with squared group distance imply
 

@@ -171,7 +171,7 @@ C_{\mathrm{PAIR}}=\frac{p(d+v)^2}{2v^2(d+1)},
 C_{\mathrm{SEP}}=\frac{p(d+v)^2}{2v^2}.
 ```
 
-At each fixed dimension and fixed $`0<v<1`$, the optimal risk obeys $`r_N=C/N+o(N^{-1})`$. Only after obtaining that limit do we compare its coefficients as dimension grows. Their orders are $`d^2,d^3,d^4`$, with exact successive ratios $`d+v`$ and $`d+1`$.
+At each fixed dimension and fixed $`0\lt v\lt 1`$, the optimal risk obeys $`r_N=C/N+o(N^{-1})`$. Only after obtaining that limit do we compare its coefficients as dimension grows. Their orders are $`d^2,d^3,d^4`$, with exact successive ratios $`d+v`$ and $`d+1`$.
 
 The qubit numbers are therefore asymptotic slopes, not an exact prediction for the risk at a specified finite number of examples. The theorem does not give a dimension-uniform onset of this regime. It also counts source pairs rather than total computation time: quantum storage, controlled measurement synthesis, fitting, source preparation and the returned classical unitary description have their own costs. The [resource account](../science/resources.md) keeps these obligations explicit.
 

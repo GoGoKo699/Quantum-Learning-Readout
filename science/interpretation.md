@@ -2,7 +2,7 @@
 
 The source contains information about a complete unknown unitary even though its two registers are separable. The question is how much precision a learner loses when it must convert that information into a classical record too early.
 
-For each source example, a fresh random input state is prepared. One register provides a quantum reference for that input; the other has passed through the same unknown unitary. The preparation record is withheld. Independent mixing makes the pair state full rank while preserving a known visibility $`0<v<1`$. The learner receives independent copies of the resulting state $`\rho_U(v)`$ and must output a classical unitary estimate. The output is evaluated by its average action on a fresh Haar-distributed input.
+For each source example, a fresh random input state is prepared. One register provides a quantum reference for that input; the other has passed through the same unknown unitary. The preparation record is withheld. Independent mixing makes the pair state full rank while preserving a known visibility $`0\lt v\lt 1`$. The learner receives independent copies of the resulting state $`\rho_U(v)`$ and must output a classical unitary estimate. The output is evaluated by its average action on a fresh Haar-distributed input.
 
 ## Three different opportunities to measure
 

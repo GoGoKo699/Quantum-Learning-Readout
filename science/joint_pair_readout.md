@@ -2,7 +2,7 @@
 
 This file identifies the exact information available when each input–output pair can be measured jointly, while different pairs are connected only through classical records. The optimal measurement retains more information than measuring the first arrival before the second arrives, but it does not attain the information available to measurements collective across examples.
 
-Fix $`d\geq2`$ and $`0<v<1`$. Put $`p=d^2-1`$ and use the model
+Fix $`d\geq2`$ and $`0\lt v\lt 1`$. Put $`p=d^2-1`$ and use the model
 
 ```math
 \rho_{U,v}
@@ -108,7 +108,7 @@ The identity component vanishes because $`\mathrm{Tr}Q=0`$. A complex antisymmet
 \leq\frac12\|S\|_{\mathrm F}^2\|A\|_{\mathrm F}^2.
 ```
 
-For completeness, the pairing can be seen without choosing a normal form. If $`A^\dagger A u=\sigma^2u`$ with $`\sigma>0`$, then $`\overline A\,\overline u/\sigma`$ is a normalized, orthogonal eigenvector with the same eigenvalue. This uses $`A^\dagger=-\overline A`$ and $`u^{\mathsf T}Au=0`$. Applied to the largest singular value, the two orthogonal vectors prove the displayed operator-norm bound.
+For completeness, the pairing can be seen without choosing a normal form. If $`A^\dagger A u=\sigma^2u`$ with $`\sigma\gt 0`$, then $`\overline A\,\overline u/\sigma`$ is a normalized, orthogonal eigenvector with the same eigenvalue. This uses $`A^\dagger=-\overline A`$ and $`u^{\mathsf T}Au=0`$. Applied to the largest singular value, the two orthogonal vectors prove the displayed operator-norm bound.
 
 Combining the estimates yields
 
@@ -130,7 +130,7 @@ f_v(x)=\frac{x(1-x)}{1-v+2vx}.
 
 ### Completeness fixes the optimal mixture
 
-For $`0<v<1`$,
+For $`0\lt v\lt 1`$,
 
 ```math
 f_v''(x)
@@ -259,7 +259,7 @@ r(I,U_\theta)
 +o(\|\theta\|^2).
 ```
 
-For fixed $`d`$ and fixed $`0<v<1`$, the sharp single-pair asymptotic risk coefficient is
+For fixed $`d`$ and fixed $`0\lt v\lt 1`$, the sharp single-pair asymptotic risk coefficient is
 
 ```math
 \boxed{
