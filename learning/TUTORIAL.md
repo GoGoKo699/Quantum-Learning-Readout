@@ -236,7 +236,7 @@ This norm, rather than covariance alone, closes the operational proof.
 
 Suppose two large experiments have the same limiting fluctuation covariance. That statement does not rule out additional information in an observable outside the chosen fluctuation description. A valid receiver theorem needs control of the complete state family.
 
-Let $`D_b=2^{2b}`$, let $`\tau_b(X)=\operatorname{Tr}(X)/D_b`$, and define the anonymous likelihood operator $`L_b(U)=D_b\Omega_{b,1/2}(U)`$. Correspondence's exact collision kernel gives, for every target,
+Let $`D_b=2^{2b}`$, let $`\tau_b(X)=\mathrm{Tr}(X)/D_b`$, and define the anonymous likelihood operator $`L_b(U)=D_b\Omega_{b,1/2}(U)`$. Correspondence's exact collision kernel gives, for every target,
 
 ```math
 \|L_b(U)\|_{2,\tau_b}^2
@@ -279,7 +279,7 @@ For a density operator $`\omega`$, measurement followed by this preparation is
 
 ```math
 E_b(\omega)=\sum_{i,j}
-\frac{\operatorname{Tr}[(P_i\otimes Q_j)\omega]}{r_i s_j}
+\frac{\mathrm{Tr}[(P_i\otimes Q_j)\omega]}{r_i s_j}
 (P_i\otimes Q_j).
 ```
 

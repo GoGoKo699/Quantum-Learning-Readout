@@ -41,7 +41,7 @@ Both local states are $`I/d`$; the parameter is in the correlations. The learner
 
 ```math
 \ell(U,\widehat U)=
-\frac{d^2-|\operatorname{Tr}(\widehat U^\dagger U)|^2}{d(d+1)}.
+\frac{d^2-|\mathrm{Tr}(\widehat U^\dagger U)|^2}{d(d+1)}.
 ```
 
 At fixed $`d\ge2`$ and $`0\lt v\lt1`$, the [model](../science/model.md) gives the exact precision coefficients. Petz's estimation framework helps formulate the problem, but the three sharp measurement-information budgets and their attaining designs are source-specific calculations. The [global converse](../science/global_converse.md) allows biased adaptive learners; the [collective proof](../science/collective_attainment.md) separately establishes attainment at an unknown target.

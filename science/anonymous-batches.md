@@ -29,7 +29,7 @@ The original SEP benchmark concerns separable effects within each identified pai
 
 ## Application of the separate-list sufficiency theorem
 
-Choose a traceless Hermitian basis $`A_1,\ldots,A_p`$ with $`p=d^2-1`$ and $`\operatorname{Tr}(A_aA_c)=d\delta_{ac}`$. Then
+Choose a traceless Hermitian basis $`A_1,\ldots,A_p`$ with $`p=d^2-1`$ and $`\mathrm{Tr}(A_aA_c)=d\delta_{ac}`$. Then
 
 ```math
 \rho_{U,v}=\frac1{d^2}
@@ -41,20 +41,24 @@ T(U)=tR_U,\quad t=\frac{v}{d+v},
 Our coefficient convention is
 
 ```math
-(R_U)_{ac}=\frac1d\operatorname{Tr}(A_cUA_aU^\dagger),
+(R_U)_{ac}=\frac1d\mathrm{Tr}(A_cUA_aU^\dagger),
 \qquad
 UA_aU^\dagger=\sum_c(R_U)_{ac}A_c.
 ```
 
 Thus the row index labels the input observable and the column index the output observable. The matrix $`R_U`$ is real orthogonal, and $`T(U)`$ is exactly the cross-covariance matrix used below. The family $`\{T(U):U\in\mathrm{PU}(d)\}`$ is compact and has operator norm $`t<1`$.
 
-**Corollary.** There are target-independent local projective measurements $`M_b^A,M_b^B`$ and target-independent local state-preparation channels $`R_b^A,R_b^B`$ such that
+**Corollary.** There are target-independent local projective measurements $`M_b^A,M_b^B`$ and target-independent local state-preparation channels $`R_b^A,R_b^B`$. Write their product measurement-and-reconstruction channel as
+
+```math
+E_b=(R_b^A\otimes R_b^B)(M_b^A\otimes M_b^B).
+```
+
+Then
 
 ```math
 \varepsilon_b:=\sup_U\left\|
-\Omega_{b,v}(U)-
-(R_b^A\otimes R_b^B)(M_b^A\otimes M_b^B)
-\bigl(\Omega_{b,v}(U)\bigr)
+\Omega_{b,v}(U)-E_b\bigl(\Omega_{b,v}(U)\bigr)
 \right\|_1\longrightarrow0
 ```
 
@@ -69,7 +73,7 @@ The full anonymous experiment is also asymptotically equivalent, through target-
 
 Each list's individual Gaussian marginal is independent of $`U`$; the parameter survives in their classical cross-correlation. This is one Gaussian observation per large anonymous batch, rather than a growing supply of independent observations.
 
-The general theorem and [complete proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/7576f1897efea538e7aef3dfc86d5c0b6de0e171/science/separate-list-readout.md) belong to **Quantum Learning Correspondence**. Readout supplies the common paired learning task, loss normalization and precision benchmarks. The new implication uses Correspondence's exact operator collision kernel together with the inherited finite-family almost-commuting-unitary theorem of Glebsky. It is not an application of Readout's existing paired-copy local estimation theorem.
+The general theorem and [complete proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/552a2b4baf586a9b57c7f5e9e364b2c42fcc95a8/science/separate-list-readout.md) belong to **Quantum Learning Correspondence**. Readout supplies the common paired learning task, loss normalization and precision benchmarks. The new implication uses Correspondence's exact operator collision kernel together with the inherited finite-family almost-commuting-unitary theorem of Glebsky. It is not an application of Readout's existing paired-copy local estimation theorem.
 
 The decisive proof step matches the entire normalized quantum likelihood norm to the Gaussian likelihood norm. Finite local Fourier observables then approximate the whole likelihood. Commuting approximants on each side give local spectral measurements; reconstruction prepares their normalized local spectral projectors. This proves recovery of the statistical experiment, whereas covariance convergence alone would not exclude surviving quantum information elsewhere in the batch.
 
@@ -105,4 +109,4 @@ A growing dimension, a contraction parameter approaching one, or parameter-depen
 - The shared source and paired benchmarks are established in this project's [model](model.md) and [collective attainment](collective_attainment.md).
 - The inherited anonymous model and exact collision kernel are pinned in [Quantum Learning Correspondence at `00d19bd`](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/00d19bd0f60c6cd34ce4b77bb3268e52120efead/science/correlation-kernel.md).
 - Lev Glebsky, *Almost commuting matrices with respect to normalized Hilbert–Schmidt norm*, [arXiv:1002.3082](https://arxiv.org/abs/1002.3082), Theorem 2, supplies simultaneous commuting approximation for a fixed finite family of unitaries. It is not a Schatten-one or operator-norm approximation theorem.
-- The general separate-list sufficiency and Gaussian-equivalence theorem is developed in [Correspondence’s authoritative proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/7576f1897efea538e7aef3dfc86d5c0b6de0e171/science/separate-list-readout.md). This page supplies its application to the paired-learning source.
+- The general separate-list sufficiency and Gaussian-equivalence theorem is developed in [Correspondence’s authoritative proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/552a2b4baf586a9b57c7f5e9e364b2c42fcc95a8/science/separate-list-readout.md). This page supplies its application to the paired-learning source.
