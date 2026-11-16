@@ -25,7 +25,7 @@ The finite checks support algebra, phases, normalization and explicit constructi
 
 ## Growing anonymous batches
 
-The [anonymous-batch application](../science/anonymous-batches.md) uses the general theorem owned by Quantum Learning Correspondence. Its [finite Fourier diagnostic](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/552a2b4baf586a9b57c7f5e9e364b2c42fcc95a8/verification/README.md) independently checks direct anonymous density matrices against the likelihood-residual, characteristic-function, collision-kernel and Gaussian-limit formulas. It includes noncommuting qubit target hypotheses and separates direct small matrices from larger exact tensor formulas.
+The [anonymous-batch application](../science/anonymous-batches.md) uses the general theorem owned by Quantum Learning Correspondence. Its [finite Fourier diagnostic](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/8edc63836384745aee80101722255154e562af8f/verification/README.md) independently checks direct anonymous density matrices against the likelihood-residual, characteristic-function, collision-kernel and Gaussian-limit formulas. It includes noncommuting qubit target hypotheses and separates direct small matrices from larger exact tensor formulas.
 
 Those computations check identities and normalization. They construct neither a commuting-approximant receiver nor Gaussian conversion kernels and do not prove the uniform recovery theorem. The theorem's operational step is analytical: equality of the full likelihood norm excludes a residual component, and the inherited almost-commuting-unitary theorem supplies separate local spectral measurements. This is a different argument from the original paired-copy Fisher-information tests.
 

@@ -239,7 +239,7 @@ Suppose two large experiments have the same limiting fluctuation covariance. Tha
 Let $`D_b=2^{2b}`$, let $`\tau_b(X)=\mathrm{Tr}(X)/D_b`$, and define the anonymous likelihood operator $`L_b(U)=D_b\Omega_{b,1/2}(U)`$. Correspondence's exact collision kernel gives, for every target,
 
 ```math
-\|L_b(U)\|_{2,\tau_b}^2
+\Vert L_b(U)\Vert _{2,\tau_b}^2
 =\sum_{k=0}^b\binom{k+2}{2}25^{-k}
 \longrightarrow\left(\frac{25}{24}\right)^3.
 ```
@@ -257,8 +257,8 @@ and the analogous $`W_b^B(y)`$. They are unchanged by permutations within a list
 Now choose a finite Fourier sum $`q`$ approximating the Gaussian likelihood in $`L^2(\gamma)`$, and use the same coefficients to build $`q_b`$ from $`W_b^A\otimes W_b^B`$. Expanding the squared error yields
 
 ```math
-\|L_b(U)-q_b\|_{2,\tau_b}^2
-\longrightarrow\|\ell_U-q\|_{L^2(\gamma)}^2.
+\Vert L_b(U)-q_b\Vert _{2,\tau_b}^2
+\longrightarrow\Vert \ell_U-q\Vert _{L^2(\gamma)}^2.
 ```
 
 This identity uses three ingredients together: the characteristic-function limit, the Fourier Gram limit, and equality of the **full** likelihood-norm limits. Fourier sums are dense, so the right side can be arbitrarily small. Compactness of the unitary orbit allows a finite collection of such approximants that works uniformly for all targets.
@@ -289,7 +289,7 @@ This conditional expectation fixes the commuting Fourier approximants. Since it 
 
 ```math
 \varepsilon_b:=\sup_U
-\|\Omega_{b,1/2}(U)-E_b(\Omega_{b,1/2}(U))\|_1
+\Vert \Omega_{b,1/2}(U)-E_b(\Omega_{b,1/2}(U))\Vert _1
 \longrightarrow0.
 ```
 

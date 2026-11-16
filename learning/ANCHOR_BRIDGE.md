@@ -53,7 +53,7 @@ The multiparameter review of Demkowicz-Dobrzański, Górecki and Guţă, [arXiv:
 Let $`M_b=M_b^A\otimes M_b^B`$ be separate collective measurements of the two lists and $`R_b=R_b^A\otimes R_b^B`$ prepare normalized local spectral projectors from their classical labels. The [anonymous-batch application](../science/anonymous-batches.md) states
 
 ```math
-\sup_U\|\Omega_{b,v}(U)-R_bM_b(\Omega_{b,v}(U))\|_1\longrightarrow0.
+\sup_U\Vert \Omega_{b,v}(U)-R_bM_b(\Omega_{b,v}(U))\Vert _1\longrightarrow0.
 ```
 
 This is the relevant asymptotic sufficiency statement: every bounded decision rule on the original anonymous batch can be simulated from the two classical records with a vanishing score change. A coherent processor consuming the data for one later prediction is also covered by channel contractivity. One anonymous batch still has bounded information; reconstruction does not recreate the lost source correspondence.

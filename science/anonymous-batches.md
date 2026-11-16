@@ -57,9 +57,9 @@ E_b=(R_b^A\otimes R_b^B)(M_b^A\otimes M_b^B).
 Then
 
 ```math
-\varepsilon_b:=\sup_U\left\|
+\varepsilon_b:=\sup_U\left\Vert
 \Omega_{b,v}(U)-E_b\bigl(\Omega_{b,v}(U)\bigr)
-\right\|_1\longrightarrow0
+\right\Vert _1\longrightarrow0
 ```
 
 as $`b\to\infty`$, with $`d,v`$ fixed. The same measurement sequence works for every unknown $`U`$.
@@ -73,7 +73,7 @@ The full anonymous experiment is also asymptotically equivalent, through target-
 
 Each list's individual Gaussian marginal is independent of $`U`$; the parameter survives in their classical cross-correlation. This is one Gaussian observation per large anonymous batch, rather than a growing supply of independent observations.
 
-The general theorem and [complete proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/552a2b4baf586a9b57c7f5e9e364b2c42fcc95a8/science/separate-list-readout.md) belong to **Quantum Learning Correspondence**. Readout supplies the common paired learning task, loss normalization and precision benchmarks. The new implication uses Correspondence's exact operator collision kernel together with the inherited finite-family almost-commuting-unitary theorem of Glebsky. It is not an application of Readout's existing paired-copy local estimation theorem.
+The general theorem and [complete proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/8edc63836384745aee80101722255154e562af8f/science/separate-list-readout.md) belong to **Quantum Learning Correspondence**. Readout supplies the common paired learning task, loss normalization and precision benchmarks. The new implication uses Correspondence's exact operator collision kernel together with the inherited finite-family almost-commuting-unitary theorem of Glebsky. It is not an application of Readout's existing paired-copy local estimation theorem.
 
 The decisive proof step matches the entire normalized quantum likelihood norm to the Gaussian likelihood norm. Finite local Fourier observables then approximate the whole likelihood. Commuting approximants on each side give local spectral measurements; reconstruction prepares their normalized local spectral projectors. This proves recovery of the statistical experiment, whereas covariance convergence alone would not exclude surviving quantum information elsewhere in the batch.
 
@@ -109,4 +109,4 @@ A growing dimension, a contraction parameter approaching one, or parameter-depen
 - The shared source and paired benchmarks are established in this project's [model](model.md) and [collective attainment](collective_attainment.md).
 - The inherited anonymous model and exact collision kernel are pinned in [Quantum Learning Correspondence at `00d19bd`](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/00d19bd0f60c6cd34ce4b77bb3268e52120efead/science/correlation-kernel.md).
 - Lev Glebsky, *Almost commuting matrices with respect to normalized Hilbert–Schmidt norm*, [arXiv:1002.3082](https://arxiv.org/abs/1002.3082), Theorem 2, supplies simultaneous commuting approximation for a fixed finite family of unitaries. It is not a Schatten-one or operator-norm approximation theorem.
-- The general separate-list sufficiency and Gaussian-equivalence theorem is developed in [Correspondence’s authoritative proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/552a2b4baf586a9b57c7f5e9e364b2c42fcc95a8/science/separate-list-readout.md). This page supplies its application to the paired-learning source.
+- The general separate-list sufficiency and Gaussian-equivalence theorem is developed in [Correspondence’s authoritative proof](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/8edc63836384745aee80101722255154e562af8f/science/separate-list-readout.md). This page supplies its application to the paired-learning source.
