@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "generated_at_utc": "2026-11-16T14:36:18.482673+00:00",
+  "generated_at_utc": "2026-11-16T14:39:06.260667+00:00",
   "script_sha256": "4089bdcb3e575842519645d035c560e3561442efd89fe8c843df9704aba4d64a",
   "markdown_files": 17,
   "checked_local_links": 187,
@@ -12,7 +12,7 @@
     "learning/TUTORIAL.md": "cac80c613a1357d728dc94f047db3019018acb644355d93b2e8fd6490c46896a",
     "references/related_work.md": "6263f972ed0642f4dd66864400afa7e6fab8fad1fc6bc6f1bd06eb78924b4e39",
     "science/README.md": "b63b0410f176d241aa12d206025f7e43f95be98219f23881990149c6aa7e19b9",
-    "science/anonymous-batches.md": "9c00b72b7e3808ee00f468ef3cf14f96d95a3a9dc8186882e6ba737b62a6eea0",
+    "science/anonymous-batches.md": "799b88804d1f966529945c092b5d782884e7649a988165210de7ddb6ef92c402",
     "science/collective_attainment.md": "3d381a8fc102f5ba5fc28f460589e94237ccc24f74c38e66f1a32d515852eb55",
     "science/global_converse.md": "f50811c352d3e377a8cedbbf317020b4ca1f3b7efe81225170408cbd96668bf1",
     "science/interpretation.md": "aafa84ada92492552f51be106b4069186502bf5c3786469da29c5fb72ee57cc4",

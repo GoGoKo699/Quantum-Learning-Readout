@@ -6,7 +6,7 @@ Each side may still couple all specimens in its own list. This collective local 
 
 ## The source and the two readout interfaces
 
-Fix $`d\ge2`$ and known $`0<v<1`$. Each supplied demonstration is
+Fix $`d\ge2`$ and known $`0\lt v\lt1`$. Each supplied demonstration is
 
 ```math
 \rho_{U,v}=\frac{I+vF_U}{d(d+v)},\qquad
