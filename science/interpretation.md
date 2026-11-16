@@ -47,6 +47,14 @@ The direction is specified by the learner's measurement, rather than by the sour
 
 Disclosing source preparations would therefore supply an additional classical resource and a different conditional statistical model. The present hierarchy does not give a sample bound for that disclosed-record experiment. It isolates the readout permissions when the preparation record remains private.
 
+## What survives an anonymous shuffle
+
+[Quantum Learning Correspondence](https://github.com/GoGoKo699/Quantum-Learning-Correspondence) studies the same source when a hidden permutation removes which input belongs to which output across one entire batch. Its exact operator correlation kernel establishes a size-independent information ceiling. More pairs in that anonymous batch do not restore the original paired experiment.
+
+The [growing-batch application](anonymous-batches.md) answers a different question from that ceiling: can separate collective readouts capture everything that still survives? At fixed dimension and known visibility, they can. Target-independent measurements on each coherent list admit local reconstruction of the whole anonymous state with uniform trace-norm error tending to zero. The surviving experiment is asymptotically equivalent to one classical Gaussian covariance observation, with the unitary in its cross-correlation. Quantum coupling between the two lists therefore gives no persistent bounded-decision advantage in this limit.
+
+This conclusion does not contradict the paired precision hierarchy. The original SEP restriction permits no quantum memory between pairs; the anonymous receiver may keep each full list coherent. Its acquisition interface has also lost the matching. For independently tagged batches, tensorization bounds the reconstruction error by the number of batches times the one-batch error. Without a rate, bounded-decision equivalence gives neither Fisher-information convergence nor a new high-precision coefficient. The general theorem and proof are owned by [Correspondence](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/7576f1897efea538e7aef3dfc86d5c0b6de0e171/science/separate-list-readout.md).
+
 ## What the dimension dependence establishes
 
 The central theorem first fixes $`d`$ and $`v`$ and then takes the number of independent pairs to infinity:

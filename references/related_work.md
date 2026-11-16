@@ -56,6 +56,23 @@ This is a background comparison for arbitrary-estimator information bounds, dist
 
 [Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) studies fixed coherent block size for preserving a uniform SLD-information fraction on moving-support state models. [Calibrated Quantum Readout](https://github.com/GoGoKo699/Calibrated-Quantum-Readout) studies calibrated single-copy readout on the full rank-r state tangent. The present source is full rank on a $`d^2`$-dimensional pair, but the unknown varies only along the $`d^2-1`$-dimensional unitary orbit generated on B. A restriction of the tangent model changes the estimation problem; neither generic state-readout conclusion can simply be substituted for the three coefficients above.
 
+## Growing anonymous batches: theorem ownership and new consequence
+
+[Quantum Learning Correspondence](https://github.com/GoGoKo699/Quantum-Learning-Correspondence) takes the supplied source from this project and removes the matching through one hidden output permutation across the entire batch. Its [exact operator correlation kernel](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/00d19bd0f60c6cd34ce4b77bb3268e52120efead/science/correlation-kernel.md) gives a size-independent information ceiling before measurement. That ceiling alone does not establish how much of the surviving information can be extracted through separate collective measurements of the lists.
+
+The general [separate-list sufficiency and Gaussian-equivalence theorem](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/7576f1897efea538e7aef3dfc86d5c0b6de0e171/science/separate-list-readout.md) is owned by Correspondence. This repository gives its [application to the paired-learning source](../science/anonymous-batches.md), defines the readout-class boundary and supplies the original precision benchmarks and gate-loss normalization. The shared theorem is one discovery with complementary source roles, rather than independent copies of a theorem in two projects.
+
+At fixed local dimensions and uniformly strict correlation contraction, full quantum likelihood norms converge to the norms of a Gaussian covariance likelihood. Bounded local Fourier observables exhaust this limit. Glebsky's inherited simultaneous approximation then supplies target-independent commuting measurements separately on the two lists; local state preparation reconstructs the full anonymous state with vanishing uniform trace error. A reference-coupling argument identifies the full surviving experiment with one Gaussian covariance observation. Covariance convergence or fixed-batch estimation alone would not prove that operational conclusion.
+
+| Primary foundation | What is inherited | What it does not establish by itself |
+| --- | --- | --- |
+| [Glebsky 2010](#glebsky2010), Theorem 2 | For a fixed finite family of unitaries, small pairwise commutators in normalized Hilbert–Schmidt norm imply nearby commuting unitaries, uniformly in matrix dimension. | It supplies no anonymous-source likelihood saturation, target-independent statistical recovery, or efficient receiver compiler. The number of frequencies is fixed at each approximation level. |
+| [Kuperberg 2005](#kuperberg2005) | The tracial quantum central-limit mechanism produces classical Gaussian fluctuation laws. | Convergence of polynomial distributions alone does not construct the required simultaneous local measurements or establish all-measurement sufficiency. The needed bounded Fourier expansions are proved directly in Correspondence. |
+| [Yamagata–Fujiwara–Gill 2013](#yfg2013) | Local Gaussian mean-shift attainment for regular iid models, as used in the paired COLL proof. | The anonymous source is a globally indexed covariance experiment with bounded information as the batch grows. The existing local-shift theorem is not the new transfer. |
+| [Petz 2008](#petz2008) | Channels, conditional expectations, statistical sufficiency, entropy and estimation provide the common educational language. | The book is not cited as proving the growing-anonymous-batch theorem. The [source bridge](../learning/ANCHOR_BRIDGE.md) supplies the project-specific steps. |
+
+The receiver retains coherent data and may entangle specimens within each list. It is different from the per-pair SEP class. The added conclusion controls bounded decisions and coherent bounded-score prediction at fixed dimension; no rate, efficient synthesis, dimension-growing guarantee, Fisher-information convergence, or arbitrary growing-number-of-batches coefficient follows. The [resource account](../science/resources.md) retains these costs and limits.
+
 ## Bibliographic links
 
 ### werner1989
@@ -107,3 +124,15 @@ Marco Fanizza, Yihui Quek and Matteo Rosati, *Learning Quantum Processes Without
 Minsoo Kim and Changhun Oh, *On the fundamental resource for exponential advantage in quantum channel learning*, **Nature Communications 17**, 1822 (2026). [DOI](https://doi.org/10.1038/s41467-026-68532-y).
 
 The machine-readable bibliography is [references.bib](references.bib).
+
+### glebsky2010
+
+Lev Glebsky, *Almost commuting matrices with respect to normalized Hilbert–Schmidt norm* (2010). [arXiv:1002.3082](https://arxiv.org/abs/1002.3082), Theorem 2. The paper calls its normalized Hilbert–Schmidt norm a normalized trace norm; it is distinct from the Schatten-one norm used for operational state error.
+
+### kuperberg2005
+
+Greg Kuperberg, *A tracial quantum central limit theorem*, **Transactions of the American Mathematical Society 357**, 459–471 (2005). [arXiv:math-ph/0202035](https://arxiv.org/abs/math-ph/0202035).
+
+### petz2008
+
+Dénes Petz, *Quantum Information Theory and Quantum Statistics*, first edition, Springer (2008). [DOI](https://doi.org/10.1007/978-3-540-74636-2). The common bridge uses §§9.1–9.2 and §9.5 for coarse-graining, conditional expectations and sufficiency; §§10.1–10.3 for estimation and Fisher information; and §§3.3–3.5 and §5.5 for entropy and Holevo information.

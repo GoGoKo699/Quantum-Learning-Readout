@@ -1,26 +1,22 @@
 # Learning route
 
-This route connects the selected 2020 multiparameter-estimation review to the project's exact learning-readout hierarchy. It uses one source and one continuing example: learning an unknown unitary from separable two-register demonstrations whose preparation records are withheld.
+The selected common educational anchor is **Dénes Petz, _Quantum Information Theory and Quantum Statistics_, first edition (2008)**, [publisher record](https://doi.org/10.1007/978-3-540-74636-2). This route follows one physical source through two questions: how readout restrictions change precision while input–output correspondence is available, and how all information surviving a large anonymous shuffle can be read separately from the two coherent lists.
 
-Start with [the anchor bridge](ANCHOR_BRIDGE.md). It gives the verified locations in Demkowicz-Dobrzański, Górecki and Guţă, *Multi-parameter estimation beyond Quantum Fisher Information*, [arXiv:2001.11742v2](https://arxiv.org/abs/2001.11742v2), and translates the review's notation into the repository's.
+Start with the [Petz bridge](ANCHOR_BRIDGE.md), then the [worked tutorial](TUTORIAL.md). The [exactly 30 project milestones](MILESTONES.md) organize the whole scientific story into ten background targets and twenty narrative targets. They are a map of the project, independent of any learner's progress.
 
-The [tutorial](TUTORIAL.md) develops the continuing example. The [30 project milestones](MILESTONES.md) organize the path from the supplied source to the complete precision hierarchy. Use the bridge when a milestone introduces an estimation concept, and follow its scientific link when the exact proof is needed.
+## Read the connected argument
 
-## A connected scientific reading order
+1. Specify [the model](../science/model.md): supplied quantum pairs, hidden preparation records, target unitary, classical estimate and gate loss.
+2. Compare [separable readout](../science/separable_readout.md), [joint-pair readout](../science/joint_pair_readout.md) and [collective attainment](../science/collective_attainment.md). The sharp coefficients distinguish coherence inside one pair from coherence across examples.
+3. Follow [the global converse](../science/global_converse.md) and the localization constructions. A local information calculation alone is insufficient for an unknown-target risk theorem allowing biased adaptive learners.
+4. Change the acquisition interface in [anonymous batches](../science/anonymous-batches.md). The permutation disappears before any learner interaction; each side may nevertheless retain its whole list coherently. Define this separate-list class before comparing it with joint readout.
+5. Learn why a correlated Gaussian description becomes a complete experiment: the exact collision norm, bounded Fourier likelihood approximation, local commuting measurements and product reconstruction. The general theorem and full proof belong to [Quantum Learning Correspondence](https://github.com/GoGoKo699/Quantum-Learning-Correspondence); the Readout account supplies its self-contained application and precise measurement-class distinction.
+6. Finish with [resources](../science/resources.md) and [attribution](../references/related_work.md). Preserve the order of limits and charge local quantum storage, collective control, measurement synthesis, classical fitting and output.
 
-1. Read [the model](../science/model.md). Specify the state supplied per example, the hidden parameter, the classical output, the gate loss and the three readout classes.
-2. Read [the interpretation](../science/interpretation.md). Separate the value of joint readout within one pair from the additional value of coherence between different pairs.
-3. Work through [separable readout](../science/separable_readout.md) and [joint-pair readout](../science/joint_pair_readout.md). These derive different sharp Fisher-trace ceilings while leaving the source and target unchanged.
-4. Follow [the global converse](../science/global_converse.md). Its group embedding turns a transcript information budget into a risk bound without assuming an unbiased learner.
-5. Read [collective attainment](../science/collective_attainment.md). Keep the local Holevo calculation, the local theorem and the unknown-center globalization as distinct proof steps.
-6. Finish with [resources](../science/resources.md) and [related work](../references/related_work.md). Identify the implementation costs left outside a sample coefficient and the earlier results used by the proof.
+## Keep the two conclusions separate
 
-The common destination is the same in every step: a classical estimate $`\widehat U\in\mathrm{PU}(d)`$ of an arbitrary fixed unitary. The theorem takes $`N\to\infty`$ at fixed $`d\ge2`$ and known $`0\lt v\lt 1`$. A comparison of the resulting coefficients as dimension grows preserves that order of limits.
+With correspondence available, the three optimal risks have distinct coefficients in the fixed-dimension limit of $`N r_N`$. After a single growing anonymous shuffle, separate collective list measurements can reconstruct the full anonymous state with uniform trace error tending to zero. The second conclusion concerns the information that remains after the acquisition change; it does not remove the anonymous information ceiling or identify the separate-list class with the earlier per-pair SEP class.
 
-## Three distinctions to keep visible
+The common assumptions are fixed $`d\ge2`$, known $`0\lt v\lt1`$, private preparation records, and no chosen-input calls to the target. The new reconstruction proof also extends to $`v=1`$ because its correlation contraction remains strict; the original regular paired precision theorem keeps its full-rank hypothesis.
 
-- A source being separable does not require its best readout to be separable.
-- A zero mean SLD commutator does not require the SLD operators to commute.
-- A local information bound does not by itself supply a global protocol for an unknown unitary.
-
-The route combines common definitions, the continuing example, worked proofs and the selected source connections.
+Petz supplies the framework of information, statistical estimation, coarse-graining and sufficiency. The exact source-specific precision laws, anonymous kernel, Fourier norm saturation, Glebsky approximation and Gaussian randomization argument are supplied separately by the scientific accounts and their primary references.
