@@ -1,8 +1,8 @@
-# One source, three precision limits
+# One source, precision limits and surviving information
 
-The experiment begins with a pair of quantum systems whose individual states reveal nothing about an unknown unitary. Their correlations do reveal it. The learning question is how much precision survives when the receiver measures the systems separately, measures each pair jointly, or keeps several pairs coherent until a collective readout.
+The experiment begins with a pair of quantum systems whose individual states reveal nothing about an unknown unitary. Their correlations do reveal it. First ask how precision changes when the receiver measures the systems separately, measures each identified pair jointly, or keeps several pairs coherent until a collective readout. Then erase the correspondence across an anonymous batch and ask whether the surviving information still needs quantum coupling between its two lists.
 
-This worked route uses one qubit in each register, $`d=2`$, and the fixed correlation parameter $`v=1/2`$. It then connects the experiment to the general theorem. The educational anchor is Demkowicz-Dobrzański, Górecki and Guţă, *Multi-parameter estimation beyond Quantum Fisher Information*, arXiv:2001.11742v2. The [anchor bridge](ANCHOR_BRIDGE.md) gives the selected source locations; the [milestone map](MILESTONES.md) lays out the full dependency route.
+This worked route uses one qubit in each register, $`d=2`$, and the fixed correlation parameter $`v=1/2`$. It connects the example to both the paired precision theorem and the separate-list sufficiency theorem. The educational anchor is Dénes Petz, *Quantum Information Theory and Quantum Statistics*, first edition (2008). The [anchor bridge](ANCHOR_BRIDGE.md) gives the selected source locations; the [milestone map](MILESTONES.md) lays out the full dependency route.
 
 ## 1. What an example contains
 
@@ -19,7 +19,7 @@ it chooses one state $`\psi`$ and emits $`|\psi\rangle_A\otimes U|\psi\rangle_B`
 Every emitted pure pair is a product across $`A:B`$. Averaging the unavailable preparation record gives
 
 ```math
-\sigma_{U,1/2}=\frac{I+\tfrac12 F_U}{5},
+\rho_{U,1/2}=\frac{I+\tfrac12 F_U}{5},
 \qquad
 F_U=(I\otimes U)F(I\otimes U^\dagger),
 ```
@@ -39,7 +39,7 @@ F=\frac12(I\otimes I+X\otimes X+Y\otimes Y+Z\otimes Z).
 Consequently our example state is
 
 ```math
-\sigma_{U,1/2}
+\rho_{U,1/2}
 =\frac14\left[
 I\otimes I+\frac15\sum_{P\in\{X,Y,Z\}}
 P\otimes UPU^\dagger
@@ -117,7 +117,7 @@ This extra permission matters because the local score observables for different 
 
 The many-copy limit is different. The Holevo bound incorporates simultaneous-estimation compatibility, and here it equals the SLD value. A collective local estimator can attain that value asymptotically. The [collective proof](../science/collective_attainment.md) then constructs an unknown-center global protocol; it does not assume the learner already knows where to apply the optimal measurement.
 
-This is the point at which the anchor review's distinction between quantum Fisher information, the Holevo bound and actual attainment becomes essential. Computing a favorable QFI is one step in the argument, not the completed learning theorem.
+Petz’s estimation framework helps formulate the distinction between information and an actual statistical procedure. The source-specific Holevo calculation and local attainment theorem are supplied by the scientific proof and its specialist primary references. Computing a favorable QFI is one step in the argument, not the completed learning theorem.
 
 ## 6. The qubit precision coefficients
 
@@ -177,19 +177,159 @@ The qubit numbers are therefore asymptotic slopes, not an exact prediction for t
 
 The preparation record remains an essential part of the experiment. Disclosing a source's input description would supply information that this learner has to extract from the quantum reference register. Chosen known inputs would change the task again. The established hierarchy concerns the specified passive native-data source with unavailable records, known correlation strength, independent pairs and the same average gate-loss criterion in all three readout classes.
 
+## 9. Remove the matching before readout
+
+Return to the same qubit source with $`v=1/2`$, but now supply two lists of $`b`$ registers each. The output list is uniformly shuffled once across the whole batch, before any learner action, and the matching is withheld. The learner receives the anonymous state $`\Omega_{b,1/2}(U)`$. This is an acquisition change: even an unrestricted joint measurement receives a different statistical experiment from the identified product of pairs.
+
+A separate-list receiver may keep all $`A`$ registers coherent, do the same on $`B`$, and perform collective measurements $`M_b^A`$ and $`M_b^B`$. It then combines the two ordinary classical records. It need never couple an $`A`$ register quantumly to a $`B`$ register.
+
+This is not the original SEP protocol. SEP converts each identified pair into classical information before proceeding to the next pair. A separate-list measurement can use quantum interactions between many specimens in its own list. The old coefficients $`37.5,12.5,5`$ therefore do not provide the new anonymous comparison.
+
+Petz's coarse-graining viewpoint asks two different questions here. First, what information did the anonymous acquisition channel remove? Second, does a later separate-list measurement lose any more information asymptotically? An upper bound for the first question does not answer the second. The [anonymous-batch account](../science/anonymous-batches.md) defines the new receiver precisely.
+
+## 10. One Gaussian observation and its information
+
+For the qubit source the correlation singular value is
+
+```math
+t=\frac{v}{d+v}=\frac15.
+```
+
+Write $`T(U)`$ for the three-by-three matrix of Pauli cross-correlations. It is $`1/5`$ times an orthogonal matrix. The candidate large-batch description is one pair of three-dimensional Gaussian vectors,
+
+```math
+(\mathbf X,\mathbf Y)\sim\mathcal N\!\left(0,
+\begin{pmatrix}I_3&T(U)\\T(U)^{\mathsf T}&I_3\end{pmatrix}\right).
+```
+
+Neither marginal depends on $`U`$. Nevertheless, their cross-correlation does. On the same rotation slice $`U_\theta=e^{-i\theta Z}`$ used in Section 2,
+
+```math
+\mathbb E_\theta[X_xY_y]=\frac15\sin(2\theta).
+```
+
+This is the continuous fluctuation counterpart of the earlier fair-sign comparison. At $`\theta=0`$ the selected components have zero covariance; at $`\theta=\pi/4`$ they have covariance $`1/5`$. The two individual records remain target-independent random variables, while their relation carries the signal.
+
+There is one such Gaussian observation per large anonymous batch. Increasing $`b`$ does not supply $`b`$ independent Gaussian observations. Its covariance stays strictly positive with a fixed finite correlation strength, so one observation leaves uncertainty. The Gaussian description is compatible with Correspondence's source-level information ceiling; it does not undo the shuffle.
+
+At $`U=I`$, $`T=tI_3`$. Relative to the reference $`\gamma`$ of independent standard vectors, the Gaussian likelihood is
+
+```math
+\ell_t(\mathbf x,\mathbf y)
+=(1-t^2)^{-3/2}
+\exp\!\left[
+\frac{t\,\mathbf x\mathbin{\cdot}\mathbf y}{1-t^2}
+-\frac{t^2(|\mathbf x|^2+|\mathbf y|^2)}{2(1-t^2)}
+\right].
+```
+
+Its squared $`L^2(\gamma)`$ norm is
+
+```math
+\int\ell_t^2\,d\gamma=(1-t^2)^{-3}
+=\left(\frac{25}{24}\right)^3.
+```
+
+This norm, rather than covariance alone, closes the operational proof.
+
+## 11. Why matching a covariance is not enough
+
+Suppose two large experiments have the same limiting fluctuation covariance. That statement does not rule out additional information in an observable outside the chosen fluctuation description. A valid receiver theorem needs control of the complete state family.
+
+Let $`D_b=2^{2b}`$, let $`\tau_b(X)=\mathrm{Tr}(X)/D_b`$, and define the anonymous likelihood operator $`L_b(U)=D_b\Omega_{b,1/2}(U)`$. Correspondence's exact collision kernel gives, for every target,
+
+```math
+\Vert L_b(U)\Vert _{2,\tau_b}^2
+=\sum_{k=0}^b\binom{k+2}{2}25^{-k}
+\longrightarrow\left(\frac{25}{24}\right)^3.
+```
+
+For example, the one-pair value is $`1+3/25=28/25`$. The limiting value is the Gaussian likelihood norm calculated in Section 10. The full quantum likelihood has no extra limiting squared norm left over beyond the Gaussian description.
+
+To turn that observation into an approximation, use bounded local Fourier operators
+
+```math
+W_b^A(x)=\left(e^{i(x_xX+x_yY+x_zZ)/\sqrt b}\right)^{\otimes b},
+```
+
+and the analogous $`W_b^B(y)`$. They are unchanged by permutations within a list. The hidden shuffle therefore disappears exactly from their expectation, reducing it to the $`b`$th power of a single-pair expectation. Taylor expansion gives the corresponding Gaussian characteristic function. Under the maximally mixed reference, the Gram matrix of any finite set of these operators also converges to the Gram matrix of Gaussian Fourier functions.
+
+Now choose a finite Fourier sum $`q`$ approximating the Gaussian likelihood in $`L^2(\gamma)`$, and use the same coefficients to build $`q_b`$ from $`W_b^A\otimes W_b^B`$. Expanding the squared error yields
+
+```math
+\Vert L_b(U)-q_b\Vert _{2,\tau_b}^2
+\longrightarrow\Vert \ell_U-q\Vert _{L^2(\gamma)}^2.
+```
+
+This identity uses three ingredients together: the characteristic-function limit, the Fourier Gram limit, and equality of the **full** likelihood-norm limits. Fourier sums are dense, so the right side can be arbitrarily small. Compactness of the unitary orbit allows a finite collection of such approximants that works uniformly for all targets.
+
+The approximants may be chosen using the known source family. The actual receiver uses the union of their frequency sets and never needs to know which approximant belongs to the unknown target. The scientific proof supplies the finite-family construction and its uniform quantifiers.
+
+## 12. A classical record that can reconstruct the state
+
+The local Fourier operators do not commute exactly at finite $`b`$. Their commutators do tend to zero in **normalized Hilbert–Schmidt norm**. Glebsky's inherited theorem approximates each fixed finite family by exactly commuting unitaries with an error that vanishes independently of the Hilbert-space dimension. Apply that theorem separately to the two lists.
+
+The common spectral projectors of the commuting A-family are $`P_i`$, with ranks $`r_i`$; those of the B-family are $`Q_j`$, with ranks $`s_j`$. Measure these projectors locally and retain the classical labels $`(i,j)`$. A target-independent reconstruction channel prepares
+
+```math
+\frac{P_i}{r_i}\otimes\frac{Q_j}{s_j}.
+```
+
+For a density operator $`\omega`$, measurement followed by this preparation is
+
+```math
+E_b(\omega)=\sum_{i,j}
+\frac{\mathrm{Tr}[(P_i\otimes Q_j)\omega]}{r_i s_j}
+(P_i\otimes Q_j).
+```
+
+A rank-two projector illustrates a necessary distinction: its classical label specifies a subspace, not an arbitrary quantum state inside it. Ordinary block pinching would retain that internal state. The reconstruction above instead prepares the normalized identity on the subspace. It is the scalar conditional expectation onto an abelian algebra, in the language of Petz §§9.1–9.2, and it really is implemented from fully classical records.
+
+This conditional expectation fixes the commuting Fourier approximants. Since it is an orthogonal projection in normalized $`L^2`$, the full likelihood approximation from Section 11 controls its error. Choosing finite frequency sets increasingly slowly as $`b`$ grows gives one target-independent receiver sequence with
+
+```math
+\varepsilon_b:=\sup_U
+\Vert \Omega_{b,1/2}(U)-E_b(\Omega_{b,1/2}(U))\Vert _1
+\longrightarrow0.
+```
+
+The use of a diagonal sequence matters: the almost-commuting theorem is applied to a fixed finite family at each approximation level, not to an uncontrolled growing number of operators.
+
+For any joint decision rule on the original anonymous batch, first reconstruct $`E_b(\Omega)`$ from the separate records and apply that rule. The outcome laws differ in total variation by at most $`\varepsilon_b/2`$. Thus all losses in $`[0,1]`$ have a vanishing optimal-risk gap. This is asymptotic sufficiency in the recovery sense of Petz §9.5, with the source-specific approximation proved separately.
+
+## 13. Limits, resources, and the whole story
+
+The same finite Fourier approximation gives more than state reconstruction. Under the maximally mixed reference, the commuting spectral labels converge to the Gaussian Fourier-coordinate law. Coupling these reference laws supplies parameter-independent randomizations in both directions. Their target errors are controlled by the same full-likelihood approximation. This establishes equivalence to the Gaussian covariance experiment described in Section 10; it is not an inference from covariance convergence alone. The full proof is owned by Correspondence and versioned from [the application](../science/anonymous-batches.md).
+
+A coherent predictor is also covered. If a fixed processor consumes the training batch together with a later input, replacing the batch by its reconstruction changes the output by a vanishing trace error, even when the later input has a reference system. Hence its bounded average-fidelity score has no persistent advantage over what the separate records permit. All output branches still count.
+
+There are two different limits in the combined story:
+
+| Experiment | Limit and conclusion | What does not follow |
+|---|---|---|
+| Identified independent pairs | Fix $`d,v`$, then let $`N\to\infty`$; obtain the three exact coefficients of $`N r_N`$. | No dimension-uniform onset or efficient collective compiler. |
+| One anonymous batch | Fix $`d,v`$, then let $`b\to\infty`$; obtain uniform state recovery and a bounded-risk gap tending to zero. | No Fisher-information convergence or equality of rescaled precision coefficients. |
+| $`m`$ independently tagged anonymous batches | Product reconstruction error is at most $`m\varepsilon_b`$; fixed $`m`$ is covered as $`b`$ grows. | An arbitrary simultaneous growth of $`m`$ needs $`m(b)\varepsilon_b\to0`$ or further quantitative control. |
+
+The total source budget for the last row is $`mb`$ pairs. Before its measurement, each side retains $`b`$ specimens of dimension $`d`$, whose joint Hilbert space has logarithmic dimension $`b\log_2d`$; for $`d=2^n`$, these are $`bn`$ data qubits. It may also need entangling control across its own list, complicated spectral measurements, initialized work, large classical records and substantial computation. The proof is an existence construction. It gives no useful convergence rate, efficient synthesis, noise threshold or runtime crossover.
+
+The two main conclusions now fit together. With correspondence supplied, restrictive readout loses precision in two distinct stages. After correspondence is erased across one growing batch, most information is already absent from the received state, and all of what remains can be extracted separately from the two coherent lists asymptotically. The first theorem prices readout while holding acquisition fixed; the second identifies a sufficient readout for the information that survives a changed acquisition channel. Both keep the preparation and permutation records unavailable and charge the quantum memory they actually use.
+
 ## Follow the milestone map
 
-The tutorial develops one example in a short reading order. The milestones expand the same story into the detailed background and proof route; these links connect every settled target to its tutorial section.
+The tutorial and the thirty milestones describe the same complete account at different resolutions. The links below cover every milestone once.
 
-| Tutorial section | Corresponding milestone targets |
+| Tutorial material | Milestone targets |
 |---|---|
-| [1. What an example contains](#1-what-an-example-contains) | [M01](MILESTONES.md#m01--what-counts-as-one-example), [M02](MILESTONES.md#m02--a-unitary-hidden-in-a-relation), [M03](MILESTONES.md#m03--product-preparation-and-informative-correlations), [M04](MILESTONES.md#m04--visibility-creates-a-regular-state-family) |
-| [2. Information in a comparison](#2-the-information-is-in-a-comparison) | [M05](MILESTONES.md#m05--count-physical-unitary-directions), [M07](MILESTONES.md#m07--a-measurement-creates-a-classical-record), [M08](MILESTONES.md#m08--scores-and-simultaneous-information) |
-| [3. A weak classical description](#3-measuring-the-reference-produces-a-weak-classical-description) | [M13](MILESTONES.md#m13--read-the-response-of-one-product-effect), [M14](MILESTONES.md#m14--completeness-limits-every-separable-readout), [M15](MILESTONES.md#m15--a-simple-local-measurement-meets-the-ceiling) |
-| [4. Joint readout within a pair](#4-waiting-for-the-second-arrival-gives-one-gain) | [M16](MILESTONES.md#m16--joint-effects-mix-exchange-sectors), [M17](MILESTONES.md#m17--derive-the-sharp-joint-pair-ceiling), [M18](MILESTONES.md#m18--normalize-the-optimal-joint-pair-seed), [M19](MILESTONES.md#m19--an-attaining-povm-must-count-all-outcomes) |
-| [5. Coherence across examples](#5-keeping-different-examples-coherent-gives-another-gain) | [M09](MILESTONES.md#m09--quantum-information-is-a-bound-on-readout), [M10](MILESTONES.md#m10--compatibility-is-more-than-operator-commutation), [M20](MILESTONES.md#m20--compute-the-collective-information-matrix), [M21](MILESTONES.md#m21--evaluate-the-holevo-value-and-its-local-meaning), [M22](MILESTONES.md#m22--upgrade-pointwise-local-attainment-carefully) |
-| [6. Qubit precision coefficients](#6-the-qubit-precision-coefficients) | [M06](MILESTONES.md#m06--specify-success-before-precision), [M12](MILESTONES.md#m12--state-the-complete-comparison), [M28](MILESTONES.md#m28--match-the-complete-three-tier-theorem) |
-| [7. Global risk and biased learners](#7-why-these-are-global-risks-including-biased-learners) | [M11](MILESTONES.md#m11--local-precision-and-global-risk), [M23](MILESTONES.md#m23--express-global-loss-without-a-coordinate-chart), [M24](MILESTONES.md#m24--bound-global-risk-without-unbiasedness), [M25](MILESTONES.md#m25--keep-the-converse-under-every-permitted-history), [M26](MILESTONES.md#m26--remove-the-known-center-for-pairwise-readouts), [M27](MILESTONES.md#m27--globalize-the-collective-optimum) |
-| [8. General dimension and limits](#8-general-dimension-and-the-meaning-of-the-limit) | [M29](MILESTONES.md#m29--price-the-interpretation-and-preserve-the-limits), [M30](MILESTONES.md#m30--explain-the-whole-contribution) |
+| 1–2. Source and comparison | [M01](MILESTONES.md#m01--specimens-and-sample-boundaries), [M02](MILESTONES.md#m02--an-unknown-transformation-in-a-relation), [M03](MILESTONES.md#m03--separable-preparation-and-hidden-correlations), [M04](MILESTONES.md#m04--visibility-and-the-swap-model), [M05](MILESTONES.md#m05--unitary-geometry-and-global-phase) |
+| 3. Weak separate pair record | [M07](MILESTONES.md#m07--measurements-and-retained-records), [M11](MILESTONES.md#m11--the-sharp-separable-effect-ceiling), [M12](MILESTONES.md#m12--a-causal-readout-that-attains-sep) |
+| 4. Joint identified-pair readout | [M13](MILESTONES.md#m13--joint-readout-of-an-identified-pair), [M14](MILESTONES.md#m14--count-a-normalized-measurement) |
+| 5. Coherence across identified examples | [M08](MILESTONES.md#m08--classical-and-quantum-information-budgets), [M15](MILESTONES.md#m15--the-collective-information-matrix), [M16](MILESTONES.md#m16--compatibility-and-the-holevo-value) |
+| 6–8. Loss global risk and precision limits | [M06](MILESTONES.md#m06--gate-loss-and-the-returned-model), [M10](MILESTONES.md#m10--global-risk-and-ordered-limits), [M17](MILESTONES.md#m17--a-converse-for-biased-adaptive-learners), [M18](MILESTONES.md#m18--attainment-at-an-unknown-target), [M19](MILESTONES.md#m19--the-complete-paired-precision-hierarchy) |
+| 9. Anonymous acquisition and a new readout class | [M09](MILESTONES.md#m09--coarse-graining-and-statistical-sufficiency), [M20](MILESTONES.md#m20--erase-correspondence-and-change-the-class), [M21](MILESTONES.md#m21--the-exact-anonymous-kernel-and-ceiling) |
+| 10. Gaussian covariance observation | [M22](MILESTONES.md#m22--a-candidate-gaussian-covariance-experiment) |
+| 11. Full likelihood and Fourier saturation | [M23](MILESTONES.md#m23--equality-of-the-full-likelihood-norms), [M24](MILESTONES.md#m24--bounded-fourier-likelihood-approximation) |
+| 12. Commuting measurements and reconstruction | [M25](MILESTONES.md#m25--almost-commuting-operators-become-a-receiver), [M26](MILESTONES.md#m26--scalar-conditional-expectation-and-reconstruction), [M27](MILESTONES.md#m27--uniform-recovery-and-bounded-decisions) |
+| 13. Gaussian equivalence prediction and limits | [M28](MILESTONES.md#m28--gaussian-equivalence-and-coherent-prediction), [M29](MILESTONES.md#m29--batch-tags-limits-and-physical-costs), [M30](MILESTONES.md#m30--explain-the-combined-scientific-story) |
 
-[Return to the anchor bridge](ANCHOR_BRIDGE.md) · [Follow the 30 milestones](MILESTONES.md) · [Read the complete scientific route](../science/README.md)
+[Return to the Petz bridge](ANCHOR_BRIDGE.md) · [Follow the 30 milestones](MILESTONES.md) · [Read the complete scientific route](../science/README.md)

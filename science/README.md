@@ -13,3 +13,9 @@ Read [the model](model.md) first. It fixes the source, gate loss, three acquisit
 
 The limiting order is part of the theorem: $`N\to\infty`$ at each fixed $`d`$ and fixed $`0\lt v\lt 1`$. The collective construction does not supply a useful uniform burn-in bound as dimension grows. The output is a classical unitary estimate, rather than an arbitrary channel hypothesis or a consumable quantum model.
 
+
+## When the correspondence is erased
+
+The [anonymous-batch application](anonymous-batches.md) changes the acquisition interface: one hidden output permutation removes the matching across a whole batch. At fixed dimension and visibility, separate collective measurements of the two lists preserve the full surviving experiment as that batch grows. The general sufficiency and Gaussian-equivalence theorem is owned by [Quantum Learning Correspondence](https://github.com/GoGoKo699/Quantum-Learning-Correspondence/blob/8edc63836384745aee80101722255154e562af8f/science/separate-list-readout.md); this project supplies its application, the paired benchmarks and the loss normalization.
+
+Separate-list collective readout may preserve coherence within each list across many examples, so it is a different class from the per-pair SEP row. Its uniform vanishing reconstruction error controls bounded decisions. It supplies no convergence rate, Fisher-information limit or automatic coefficient comparison for arbitrarily many growing batches. The original three precision coefficients above retain their paired-interface hypotheses.

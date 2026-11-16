@@ -1,104 +1,69 @@
-# From multiparameter estimation to learning readout
+# From Petz to precision and surviving information
 
-The selected educational anchor is Rafał Demkowicz-Dobrzański, Wojciech Górecki and Mădălin Guţă, *Multi-parameter estimation beyond Quantum Fisher Information*, **Journal of Physics A: Mathematical and Theoretical 53**, 363001 (2020), [arXiv:2001.11742v2](https://arxiv.org/abs/2001.11742v2), revised 1 September 2020. The section and printed-page locations below refer to that 69-page version. [Published article](https://doi.org/10.1088/1751-8121/ab8ef3).
+The selected educational anchor is **Dénes Petz, _Quantum Information Theory and Quantum Statistics_, first edition, copyright 2008, Springer**, [DOI:10.1007/978-3-540-74636-2](https://doi.org/10.1007/978-3-540-74636-2). The section locators below refer to that edition. They locate educational foundations; they do not imply that the book contains this project's precision hierarchy or the sister theorem about anonymous batches.
 
-Use the review to understand the statistical distinctions; use the repository's scientific files for the source-specific theorems and proofs. The common thread is a learner that receives native quantum data, chooses a physically permitted readout, and returns a classical description of an unknown unitary.
+The continuing experiment is a native quantum demonstration of an unknown unitary. Each input specimen is correlated with an output specimen, while the source withholds its preparation record. First retain their correspondence and vary the allowed readout. Then erase correspondence across a batch and ask how the surviving information can be extracted.
 
-## A reading map
+## A common source, two statistical questions
 
-| Review location in v2 | Reading purpose | Project connection |
+| Petz location | Reading purpose | Project connection |
 |---|---|---|
-| Section 1.2, printed pp. 4–6 | Specify states, measurements, estimates and loss. | Read [the model](../science/model.md). Identify the supplied pair, the hidden unitary, the classical output and the gate loss before comparing readouts. |
-| Sections 2.1–2.2, printed pp. 8–10 | Separate classical FI from SLD QFI. | A measurement produces a likelihood and a classical FI matrix. The model's $`jI_p`$ is the SLD matrix before a readout restriction is imposed. |
-| Section 2.3, beginning on printed p. 11 | Introduce the Holevo optimization. | Follow the explicit dual-SLD substitution in [collective attainment](../science/collective_attainment.md#evaluation-of-the-holevo-value). |
-| Section 2.6, printed pp. 15–16, especially Eq. (40) | Distinguish two commutation conditions. | Check zero mean commutators, rather than assuming the SLD operators commute. |
-| Section 3.1, especially the example on printed pp. 23–25 | See a small model before the high-dimensional one. | Interpret a gap between a one-example measurement and a collective limit without changing the input source. |
-| Section 4.5, printed pp. 43–45 | Track localization and an unknown center. | Read the project's pilot, clipping and diagonal argument. A local optimum by itself is not an unknown-unitary protocol. |
-| Section 5.3, printed pp. 53–54 | Use covariance. | Verify that known rotations preserve SEP, PAIR and COLL and that Haar randomization makes the risk independent of the target. |
-| Section 5.5, beginning on printed p. 57 | Allow biased estimators in a lower-bound argument. | The project's [global converse](../science/global_converse.md) uses its own group embedding and Haar integration by parts. |
+| §§3.3–3.5 and §5.5 | Entropy, information quantities and Holevo information | Understand why a source-level information ceiling differs from a bound for one chosen measurement. The anonymous kernel controls the whole density operator before readout. |
+| §§9.1–9.2 | Coarse-grainings and conditional expectations | Model a measurement, a forgotten permutation and a classical record as physical channels. Distinguish block pinching from the scalar conditional expectation used for separate-list reconstruction. |
+| §9.5 | Sufficiency and recovery | Ask whether a parameter-independent reverse channel reconstructs a statistical experiment after readout. Translate exact sufficiency into the uniform asymptotic recovery statement proved for growing anonymous batches. |
+| §§10.1–10.3 | State estimation and Fisher information | Interpret actual classical Fisher information, quantum information bounds and the precision of an estimated unitary. Keep this derivative-sensitive viewpoint distinct from bounded-risk equivalence in trace norm. |
 
-This is a targeted route through one anchor, rather than a request to read the review consecutively. The project-specific learning sequence is organized in [the learning route](README.md).
+No unverified book page or theorem number is required for this route. Use the linked scientific accounts for the additional hypotheses, normalizations and proofs specific to the experiment.
 
-## Translate the notation first
+## Translate the objects before comparing them
 
-| Review notation or role | Project notation or role | Distinction to retain |
+| Statistical object | Object in the paired experiment | Object after anonymous shuffling |
 |---|---|---|
-| $`\rho_\theta`$ | $`\sigma_{U,v}`$ or $`\rho_U(v)`$ | The unknown varies along a unitary orbit; $`d`$ and $`v`$ are known. |
-| $`\theta\in\mathbb R^p`$ | Local coordinates of $`U\in\mathrm{PU}(d)`$, with $`p=d^2-1`$ | A coordinate patch is not the whole global parameter space. Global phase is absent. |
-| Number of copies, often $`n`$ | $`N`$ supplied pairs | In qubit examples, $`n=\log_2d`$ instead counts qubits. |
-| Classical FI $`F`$ | Classical FI $`I(U)`$ | The project's $`F`$ is also the swap operator; context matters. |
-| SLD QFI $`F_Q`$ | $`J=jI_p`$, $`j=2dv^2/(d+v)`$ | It bounds all readouts, but need not be attained by one allowed pair measurement. |
-| Quadratic cost matrix $`C`$ | $`W=wI_p`$, $`w=d/(d+1)`$ | The project uses Haar-average gate infidelity. |
-| A local Holevo value | $`C_H(W)`$ | Its equality to a global risk coefficient needs an attainment and globalization proof. |
-| Covariance matrix of an estimate | Mean local squared error | The main minimax problem also permits biased estimators. |
-| A qubit Bloch radius | The project's visibility $`v`$ or risks $`r_N`$ | These symbols describe different quantities; qubit example formulas are not the project's theorem. |
+| Parameter | $`U\in\mathrm{PU}(d)`$, with global phase removed | The same $`U`$, entering the correlation matrix $`T(U)`$ |
+| Supplied state | $`\rho_{U,v}^{\otimes N}`$ with identified pairs | $`\Omega_{b,v}(U)`$ on two distinguishable lists, with one hidden output permutation |
+| Coarse-graining | A permitted SEP, PAIR or COLL readout | The anonymous acquisition channel, then a readout of the received lists |
+| Classical record | Measurement outcomes and a unitary estimate | Two local collective-measurement labels combined classically |
+| Performance statement | Exact fixed-$`d,v`$ coefficient of gate-infidelity risk | Uniform reconstruction error tending to zero, hence all bounded decision risks preserved |
+| Recovery | Estimation does not generally reconstruct the supplied pairs | A target-independent product preparation channel approximately reconstructs the anonymous state |
 
-## Start with the source and the returned model
+Here SEP means a separable-effect measurement on each identified pair, with classical-only memory between pairs. A separate-list measurement may couple all $`A`$ specimens coherently and all $`B`$ specimens coherently. It belongs to a different access model; the old SEP converse cannot be applied to it by changing notation.
 
-One example is the two-register state
+## Start with the paired source and loss
+
+One supplied example is
 
 ```math
-\sigma_{U,v}
-=\frac{I+vF_U}{d(d+v)},
-\qquad
+\rho_{U,v}=\frac{I+vF_U}{d(d+v)},\qquad
 F_U=(I\otimes U)F(I\otimes U^\dagger).
 ```
 
-The source can generate it using product pure states with hidden random preparation records. Each marginal is $`I/d`$, so neither register alone identifies $`U`$. Correlations carry the parameter. The output is a reusable classical estimate $`\widehat U`$, evaluated using
+Both local states are $`I/d`$; the parameter is in the correlations. The learner returns a classical estimate $`\widehat U`$, scored by
 
 ```math
-\ell(U,\widehat U)
-=\frac{d^2-|\mathrm{Tr}(\widehat U^\dagger U)|^2}{d(d+1)}.
+\ell(U,\widehat U)=
+\frac{d^2-|\mathrm{Tr}(\widehat U^\dagger U)|^2}{d(d+1)}.
 ```
 
-This makes the estimation concepts concrete. There is one fixed unknown transformation, many independently prepared examples, and a specified loss for future predictions. It is not a task of returning one stored example as a quantum hypothesis.
+At fixed $`d\ge2`$ and $`0\lt v\lt1`$, the [model](../science/model.md) gives the exact precision coefficients. Petz's estimation framework helps formulate the problem, but the three sharp measurement-information budgets and their attaining designs are source-specific calculations. The [global converse](../science/global_converse.md) allows biased adaptive learners; the [collective proof](../science/collective_attainment.md) separately establishes attainment at an unknown target.
 
-## Follow the three proof moves
+The multiparameter review of Demkowicz-Dobrzański, Górecki and Guţă, [arXiv:2001.11742v2](https://arxiv.org/abs/2001.11742v2), remains a supplementary specialist reference for the SLD/Holevo framework. The selected common educational source is Petz. The precise local attainment theorem used by the proof is identified in the scientific account; it is not silently attributed to the book or review.
 
-**First, hold the readout permission fixed.** SEP allows a separable-effect measurement on each pair, including local operations and classical communication. PAIR allows any measurement on one pair. Both retain only classical information between examples and allow adaptation to the complete earlier transcript. COLL allows a joint measurement across different examples. A causal A-before-B receiver belongs to SEP and already attains its coefficient. A measurement that stores many A registers and is separable only across the large $`A^{\otimes N}:B^{\otimes N}`$ split belongs to a different class.
+## Then ask for recovery of the anonymous experiment
 
-**Second, calculate the information allowed by that permission.** The separate derivations in [separable readout](../science/separable_readout.md) and [joint-pair readout](../science/joint_pair_readout.md) give sharp Fisher-trace budgets. The [global converse](../science/global_converse.md) converts those budgets into a risk bound for arbitrary biased adaptive learners. This step is necessary: inserting an unrestricted QFI matrix would erase the restriction being studied.
-
-**Third, establish attainability at an unknown target.** For COLL, the source has SLDs $`L_a=-iv[I\otimes T_a,F]`$ at identity and
+Let $`M_b=M_b^A\otimes M_b^B`$ be separate collective measurements of the two lists and $`R_b=R_b^A\otimes R_b^B`$ prepare normalized local spectral projectors from their classical labels. The [anonymous-batch application](../science/anonymous-batches.md) states
 
 ```math
-\mathrm{Tr}(\rho L_aL_b)=j\delta_{ab},
-\qquad
-\mathrm{Tr}(\rho[L_a,L_b])=0.
+\sup_U\Vert \Omega_{b,v}(U)-R_bM_b(\Omega_{b,v}(U))\Vert _1\longrightarrow0.
 ```
 
-The choice $`X_a=L_a/j`$ in the Holevo optimization has real covariance. It gives
+This is the relevant asymptotic sufficiency statement: every bounded decision rule on the original anonymous batch can be simulated from the two classical records with a vanishing score change. A coherent processor consuming the data for one later prediction is also covered by channel contractivity. One anonymous batch still has bounded information; reconstruction does not recreate the lost source correspondence.
 
-```math
-C_H(wI_p)=\frac{wp}{j}
-=\frac{p(d+v)}{2v^2(d+1)}.
-```
+A joint spectral projector can have rank greater than one. Ordinary block pinching leaves a quantum state inside each block. The scalar conditional expectation replaces that block by its normalized identity and is implemented by measurement followed by preparation. This is the channel needed for a fully classical record.
 
-The SLDs still need not commute. The value is a collective asymptotic benchmark, not a simultaneous one-pair measurement prescription. The project's [collective proof](../science/collective_attainment.md) uses the precise local theorem in its references and then supplies the required global construction for this full-rank orbit with repeated eigenvalues.
+## What the project must supply beyond the book
 
-## Read the final coefficients with their quantifiers
+The general theorem and authoritative proof are owned by Quantum Learning Correspondence. Its exact anonymous collision kernel supplies a limiting squared likelihood norm. The corresponding Gaussian covariance likelihood has exactly the same norm. Bounded local Fourier observables therefore approximate the entire likelihood rather than merely matching its covariance. Glebsky's inherited finite-family theorem then turns asymptotically commuting local Fourier operators into genuine commuting local measurements. A reference-coupling argument supplies two-way equivalence with the Gaussian covariance experiment.
 
-For every fixed $`d\ge2`$ and fixed known $`0\lt v\lt 1`$,
+These are additional proof steps. Ordinary local iid estimation results do not automatically construct a separate-list receiver for a globally indexed covariance family. Likewise, trace-norm recovery does not imply Fisher-information convergence, exact high-precision coefficients or a bound uniform in growing dimension. The [tutorial](TUTORIAL.md) works through the qubit normalization, the norm-saturation mechanism and the batch-count limit explicitly.
 
-```math
-\begin{aligned}
-\lim_{N\to\infty}N r_N^{\mathrm{COLL}}
-&=\frac{p(d+v)}{2v^2(d+1)},\\
-\lim_{N\to\infty}N r_N^{\mathrm{PAIR}}
-&=\frac{p(d+v)^2}{2v^2(d+1)},\\
-\lim_{N\to\infty}N r_N^{\mathrm{SEP}}
-&=\frac{p(d+v)^2}{2v^2}.
-\end{aligned}
-```
-
-Haar Bayes and worst-case minimax risks agree for these classes by covariance. The coefficients show a factor $`d+1`$ from permitting joint readout within a pair and a further factor $`d+v`$ from permitting collective readout across pairs.
-
-Only after taking the fixed-dimension limit may their dimension dependence be compared. The proof does not provide a dimension-uniform threshold for reaching these precision coefficients, a polynomial-time collective learner, or a finite-accuracy runtime advantage. The [resource account](../science/resources.md) keeps source count, retention, synthesis, fitting and the classical output separate.
-
-## What comes from the anchor, and what must be proved here
-
-The review provides the estimation framework and the route among SLD, Holevo, QLAN and Bayesian viewpoints. It does not contain this supplied source's three sharp constrained coefficients, the complete adaptive-transcript converse, or its optimal readout constructions. Those are the project's specialist calculations.
-
-It also does not remove the need to check the hypotheses of a cited attainment theorem. This source has repeated eigenvalues. The collective account identifies the local theorem actually used and distinguishes it from global results stated only for nondegenerate spectra. Likewise, a Bayesian perspective permits biased estimators, but a local-unbiased inequality alone does not establish the project's global lower bound.
-
-The bridge is complete when the same question can be followed through all three languages: the physical receiver's memory permissions, the resulting information budget, and the attained risk for a classical unitary model.
+The bridge is complete when one can distinguish three resources in the same source: readout permissions while correspondence is supplied, the correspondence removed by acquisition, and coherent collective processing retained inside each anonymous list.

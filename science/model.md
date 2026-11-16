@@ -81,7 +81,7 @@ SEP includes arbitrary local operations and classical communication within one p
 
 In SEP and PAIR, the measurement chosen for a new pair may depend on the entire previous classical transcript. Ancillas and within-pair operations are allowed subject to the displayed readout restriction. No quantum output persists into the next pair.
 
-A joint measurement that is separable only across $`A^{\otimes N}:B^{\otimes N}`$, while storing and processing many $`A`$ registers coherently, is not the SEP class defined here. No converse for that larger class is asserted.
+A joint measurement that is separable only across $`A^{\otimes N}:B^{\otimes N}`$, while storing and processing many $`A`$ registers coherently, is not the SEP class defined here. No converse for that larger class is asserted. The [growing anonymous-batch application](anonymous-batches.md) studies separate collective measurements of the two lists after a hidden shuffle has removed their pairings. It does not extend the SEP converse to that class on the paired acquisition interface.
 
 ## Risk and limiting order
 

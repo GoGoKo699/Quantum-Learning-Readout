@@ -36,6 +36,14 @@ The random pure state can be entangled among the qubits inside a register. The s
 
 A straightforward collective implementation stores $`2nN`$ specimen qubits, plus measurement workspace. The theorem does not prove this width necessary or optimize a memory-versus-precision frontier. A global measurement separable across $`A^N:B^N`$ with coherent storage within each side is a different class from per-pair separable readout.
 
+## Separate collective readout after an anonymous shuffle
+
+The [anonymous-batch receiver](anonymous-batches.md) retains all $`b`$ input specimens coherently on one side and all $`b`$ output specimens on the other. For $`d=2^n`$, this is $`nb`$ data qubits per side before measurement, plus initialized work. It permits entangling control within each list. Its two list measurements require no quantum interaction between the lists; their records are combined classically.
+
+The construction uses spectral measurements of commuting approximants to finite Fourier families and a slow diagonal schedule. Charge those collective controls, measurement synthesis and accuracy, data retention time, classical records and computation. The existence theorem supplies no efficient compiler, compressed-memory realization, noise tolerance or runtime advantage. Local reconstruction prepares normalized spectral projectors from the classical records; this is a physical target-independent channel and supplies no hidden source record.
+
+If $`m`$ independently shuffled batches carry visible batch tags, the supplied budget is $`mb`$ pairs, including every specimen. Product reconstruction error is at most $`m\varepsilon_b`$, where $`\varepsilon_b\to0`$ at fixed $`d,v`$ as $`b\to\infty`$. This covers fixed $`m`$ and schedules with $`m\varepsilon_b\to0`$. No rate or automatically valid arbitrarily growing batch-count limit is provided. Preparation seeds, permutation records and purifications remain inaccessible, and no chosen-input calls or source replay are supplied.
+
 ## A normalized POVM is an actual operation
 
 The [optimal joint-pair measurement](joint_pair_readout.md) is a normalized covariant POVM. Sampling a random orbit vector, testing its rank-one projector and retaining only successes implements a different experiment. Its unsuccessful attempts cannot be dropped or supplied for free.

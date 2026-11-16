@@ -8,15 +8,18 @@ Question: what do coherent acquisition resources change when learning a unitary 
 - Sharp per-pair separable/LOCC optimum and attaining design: science/separable_readout.md
 - Sharp arbitrary one-pair POVM optimum and normalized covariant measurement: science/joint_pair_readout.md
 - SLD/Holevo coefficient and unknown-center global attainment: science/collective_attainment.md
+- Growing anonymous batches, separate collective list readout and the Gaussian covariance limit: science/anonymous-batches.md
 - Meaning and worked examples: science/interpretation.md
 - Source, storage, genuine POVM, precision and output charges: science/resources.md
 - Primary foundations and exact-model comparisons: references/related_work.md
 - Bibliography: references/references.bib
-- Learning entrypoint and selected 2020 review: learning/README.md
+- Learning entrypoint and selected Petz textbook (first edition, 2008): learning/README.md
 - Exactly 30 scientific milestones: learning/MILESTONES.md
 - Source locations, notation and proof bridge: learning/ANCHOR_BRIDGE.md
 - Worked qubit example and connected argument: learning/TUTORIAL.md
 - Reproducible finite checks and coverage: verification/README.md
 
 Essential qualifiers: fixed d>=2 and known0<v<1, followed by N->infinity; classical unitary estimate; per-pair separable and joint classes retain only classical records between examples. Supplied quantum data do not provide active unitary queries. A normalized orbit POVM is not random binary testing with free postselection. No dimension-uniform finite-error or runtime advantage is established.
+
+For anonymous data, each list may instead retain all its specimens coherently. Separate-list collective readout is a different class from the original per-pair SEP class. At fixed dimension and visibility, a growing anonymous batch admits target-independent local measurement and product state reconstruction with vanishing trace error. The full new proof is owned by Quantum Learning Correspondence and is version-linked from science/anonymous-batches.md. This does not restore consistency from one anonymous batch or establish Fisher-information convergence. For a growing number m(b) of tagged batches, the direct reconstruction guarantee requires m(b) times the one-batch error to vanish. Measurement synthesis, local coherent storage and classical processing remain charged.
 

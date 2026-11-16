@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 1,
+      "source_sha256": "452701faabb4c3fea011cb48ee67e3c5dc7faec10b4090c40d7370412887458e",
+      "required_text": [
+        "ρU,v",
+        "d(d+v)",
+        "0<v<1"
+      ],
+      "expected_text": "ρU,v=I+vFUd(d+v),FU=(I⊗U)F(I⊗U†),0<v<1,"
+    },
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "fb2e66b15cb5e7119766108dc801a1c516e616f3d5fa251206c623c8c24ccd53",
+      "required_text": [
+        "RN=C/N",
+        "N−1"
+      ],
+      "expected_text": "RN=C/N+od,v(N−1)"
+    },
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "c80c0487667704711aff96249c7d0cd48011114d7fa746a858691b0951ba1e7c",
+      "required_text": [
+        "p(d+v)",
+        "2v2(d+1)"
+      ],
+      "expected_text": "p(d+v)/[2v2(d+1)]"
+    },
+    {
+      "path": "README.md",
+      "index": 9,
+      "source_sha256": "b4944d75bcad3feb24a5eeb0e4f7488849e6b35a0103aa32b20ede83f5220024",
+      "required_text": [
+        "p(d+v)2",
+        "2v2(d+1)"
+      ],
+      "expected_text": "p(d+v)2/[2v2(d+1)]"
+    },
+    {
+      "path": "README.md",
+      "index": 10,
+      "source_sha256": "97d73c678808a0f29e2782dc20d53393078f8f661a662dd6d5287f4a559b37b6",
+      "required_text": [
+        "p(d+v)2",
+        "2v2"
+      ],
+      "expected_text": "p(d+v)2/(2v2)"
+    },
+    {
+      "path": "learning/ANCHOR_BRIDGE.md",
+      "index": 12,
+      "source_sha256": "8ba8b75dff90df6a272213125414b39d002d3bea90b4bfe5b5465e605f00fbe9",
+      "required_text": [
+        "Tr",
+        "d2",
+        "d(d+1)"
+      ]
+    },
+    {
+      "path": "learning/ANCHOR_BRIDGE.md",
+      "index": 17,
+      "source_sha256": "14db70c0c63bae6579faa5f8ba887a223a04933b30ade494389ced48459307e1",
+      "required_text": [
+        "‖"
+      ]
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 117,
+      "source_sha256": "73c0f07b4975603c4a6c732f693171d30e2cb386628aa0598dcfc212bf6c090c",
+      "required_text": [
+        "Tr",
+        "τb(X)",
+        "Tr(X)",
+        "Db"
+      ]
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 119,
+      "source_sha256": "01b1915581a2b0a18bbfa52e455e27599bea4026aae8af81a9e0219eae0e829b",
+      "required_text": [
+        "‖"
+      ]
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 128,
+      "source_sha256": "24cd0ddf4ef2d499d81a9b51b70a3b61bc22405e28289c381b9d247832a5553c",
+      "required_text": [
+        "‖"
+      ]
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 137,
+      "source_sha256": "3db8fd3a1a36ee8aa10f7c51d4a51a08b3fa686067fd2ef68ab1f7ba5cf15db5",
+      "required_text": [
+        "Tr",
+        "Eb(ω)",
+        "Tr[(Pi⊗Qj)ω]",
+        "risj"
+      ]
+    },
+    {
+      "path": "learning/TUTORIAL.md",
+      "index": 140,
+      "source_sha256": "78974f778c641f72b74cfa88776c6debbaa1d292170875e936597894763f1ffa",
+      "required_text": [
+        "‖"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 15,
+      "source_sha256": "d4901bd67ef1776598cc2204ccc0a00cb4d6a2311a7f993bfd3bcfba76e3d456",
+      "required_text": [
+        "Tr",
+        "Tr(AaAc)",
+        "dδac"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 17,
+      "source_sha256": "0e9e437749d4cb4a7455aafeb27e03e080c22f52e2e3fcd1b047aa25a6cfb84a",
+      "required_text": [
+        "Tr",
+        "(RU)ac",
+        "Tr(AcUAaU†)",
+        "UAaU†"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 24,
+      "source_sha256": "e2d093c4965945c1fb7e47c004832a7257e3819eefcfd982dacdfe84de46d1de",
+      "required_text": [
+        "Eb",
+        "RbA⊗RbB",
+        "MbA⊗MbB"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 25,
+      "source_sha256": "9a907c1310bc46b60798a117800b8b67847e105b706379e26d786baff8070b7d",
+      "required_text": [
+        "Ωb,v(U)",
+        "Eb",
+        "sup",
+        "⟶0"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 29,
+      "source_sha256": "1a89382f204324dbe9562efe74bedd2c1c3f7ef1845c5181ec74fdcf8d1b9a94",
+      "required_text": [
+        "(X,Y)",
+        "N(0,",
+        "T(U)",
+        "Ip"
+      ]
+    },
+    {
+      "path": "science/anonymous-batches.md",
+      "index": 35,
+      "source_sha256": "50cbb2fd2ad4f0af28791bb61ff87e159d41ddaf251df0ea1d0a9d27fa407147",
+      "required_text": [
+        "0≤",
+        "Rbseparate−Rbjoint",
+        "εb",
+        "⟶0"
+      ]
+    }
+  ]
+}

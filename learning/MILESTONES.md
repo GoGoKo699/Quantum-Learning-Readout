@@ -1,252 +1,250 @@
-# Thirty milestones for the readout hierarchy
+# Thirty milestones for precision and surviving information
 
-This is a common map of the project's scientific story. It contains exactly thirty understanding targets, M01–M30. It does not prescribe a coaching or assessment procedure.
+This project-intrinsic map contains exactly thirty understanding targets, M01–M30. The selected common educational anchor is **Dénes Petz, _Quantum Information Theory and Quantum Statistics_, first edition (2008)**, [publisher record](https://doi.org/10.1007/978-3-540-74636-2). The [anchor bridge](ANCHOR_BRIDGE.md) identifies verified section connections and additional project-specific proof tools; a source pointer does not attribute a new theorem to the book.
 
-The selected educational anchor is **Rafał Demkowicz-Dobrzański, Wojciech Górecki and Mădălin Guţă, _Multi-parameter estimation beyond Quantum Fisher Information_, arXiv:2001.11742v2 (2020)**. Its [versioned primary record](https://arxiv.org/abs/2001.11742v2) supplies the review and its 69-page PDF. Section pointers below refer to that version. The [anchor bridge](ANCHOR_BRIDGE.md) translates its notation and identifies the additional project-specific arguments. A framework pointer does not imply that the review contains this project's source construction or sharp readout laws.
+The allocation is **10 background/preliminaries milestones and 20 narrative/innovation milestones**. The background builds a precise statistical experiment from specimens, access, measurements and loss. The narrative first closes the paired precision hierarchy, then changes acquisition by erasing correspondence and follows the surviving information through a complete separate-list receiver and Gaussian equivalence. Each phase progresses from local objects to the global account. The map contains no personal learner state or assessment procedure.
 
-The allocation is **12 background/preliminaries milestones and 18 narrative/innovation milestones**. The background assembles a well-posed estimation problem from individual specimens, measurements and loss. The longer narrative follows three distinct information ceilings, their attaining measurements, and the global arguments needed to turn local precision into a complete learning theorem. Each phase moves from individual objects and mechanisms to an integrated account.
+## Background/preliminaries — M01–M10
 
-## Background/preliminaries — M01–M12
+### M01 — Specimens and sample boundaries
 
-### M01 — What counts as one example?
+- **Central question:** What is supplied as one example?
+- **Understanding target:** Distinguish one register, one identified input–output pair, and a batch of pairs; count source copies before imposing a readout restriction.
+- **Dependencies and story role:** None; this fixes the physical unit used throughout.
+- **Conceptual connection:** Data counts follow physical specimen boundaries.
+- **Source pointers:** Petz §§10.1–10.3; [supplied examples](../science/model.md#the-supplied-examples).
 
-- **Central question:** Which physical systems arrive together, and what does one sample count?
-- **Understanding target:** Distinguish one $`d`$-dimensional register, one $`A:B`$ example pair, and a collection of independent pairs.
-- **Dependencies and story role:** None. This fixes the local unit whose readout and storage will later be restricted.
-- **Conceptual connection:** A statistical sample must be tied to a physical specimen boundary.
-- **Source pointers:** Anchor §1.2; [supplied examples](../science/model.md#the-supplied-examples), [quantum retention](../science/resources.md#quantum-retention).
+### M02 — An unknown transformation in a relation
 
-### M02 — A unitary hidden in a relation
+- **Central question:** What does a native quantum demonstration reveal without its preparation seed?
+- **Understanding target:** Separate the fixed target unitary from fresh random input orientations and distinguish supplied specimens from chosen-input target queries.
+- **Dependencies and story role:** M01; identifies the parameter and unavailable information.
+- **Conceptual connection:** Input control and classical side information are part of the statistical model.
+- **Source pointers:** [Access model](../science/model.md#the-supplied-examples); [preparation records](../science/interpretation.md#the-preparation-record-is-a-resource).
 
-- **Central question:** What is unknown when a source supplies an input–output relation but withholds its preparation record?
-- **Understanding target:** Explain the fixed target $`U`$, fresh nuisance input states, and the difference between passive copies and chosen-input unitary access.
-- **Dependencies and story role:** M01. It identifies what an individual example demonstrates.
-- **Conceptual connection:** Quantum learning here is estimation of a supplied state family, rather than optimization over freely chosen probes.
-- **Source pointers:** Anchor §§1.1–1.2; [source and access model](../science/model.md#the-supplied-examples), [preparation record](../science/interpretation.md#the-preparation-record-is-a-resource).
+### M03 — Separable preparation and hidden correlations
 
-### M03 — Product preparation and informative correlations
+- **Central question:** How can two uninformative marginals contain an informative relation?
+- **Understanding target:** Verify that both marginals are maximally mixed while the pair depends on the target; distinguish separable preparation from restrictions on measurement effects.
+- **Dependencies and story role:** M01–M02; locates the signal before choosing a readout.
+- **Conceptual connection:** Information can reside in correlations even when neither marginal carries it.
+- **Source pointers:** Petz §§3.3–3.5; [source mixture](../science/model.md#the-supplied-examples).
 
-- **Central question:** Can unentangled examples carry information unavailable in either register separately?
-- **Understanding target:** Distinguish separable preparation from a product density operator, and verify why both marginals reveal no target information.
-- **Dependencies and story role:** M01–M02. It locates the signal in the relation between the two arrivals.
-- **Conceptual connection:** Preparation entanglement and measurement entanglement are different resources.
-- **Source pointers:** Anchor §1.2; [source mixture](../science/model.md#the-supplied-examples), [separability and readout](../science/interpretation.md#why-separability-does-not-settle-the-issue).
+### M04 — Visibility and the swap model
 
-### M04 — Visibility creates a regular state family
+- **Central question:** How does the physical ensemble produce a regular state family?
+- **Understanding target:** Connect the two-design second moment, swap operator, visibility and symmetric/antisymmetric eigenvalues; retain the full-rank condition for the paired precision theorem.
+- **Dependencies and story role:** M02–M03; assembles the supplied density operator.
+- **Conceptual connection:** Physical mixing and statistical regularity are different roles of one visibility parameter.
+- **Source pointers:** [Model and spectrum](../science/model.md#the-supplied-examples); [source costs](../science/resources.md#preparing-the-native-demonstrations).
 
-- **Central question:** How do hidden shared seeds and independent mixing produce the stated full-rank model?
-- **Understanding target:** Connect the projective 2-design second moment, swap operator, visibility $`v`$, and two positive eigenvalues.
-- **Dependencies and story role:** M02–M03. It combines the preparation ingredients into one density operator.
-- **Conceptual connection:** A physical noise parameter can also determine which statistical regularity theorem applies.
-- **Source pointers:** Anchor §1.2; [supplied examples and spectrum](../science/model.md#the-supplied-examples), [native source preparation](../science/resources.md#preparing-the-native-demonstrations).
+### M05 — Unitary geometry and global phase
 
-### M05 — Count physical unitary directions
+- **Central question:** Which real directions must a complete learned unitary resolve?
+- **Understanding target:** Remove global phase, obtain the dimension of the projective-unitary target, and use consistently normalized traceless Hermitian generators.
+- **Dependencies and story role:** M02, M04; supplies local coordinates without replacing the global parameter space.
+- **Conceptual connection:** Gauge freedom must be removed before comparing information matrices.
+- **Source pointers:** Petz §§10.1–10.3; [normalizations](../science/model.md#the-constants); [adjoint embedding](../science/global_converse.md#1-a-phase-insensitive-embedding).
 
-- **Central question:** Why does a complete unitary have $`p=d^2-1`$ relevant real directions?
-- **Understanding target:** Remove global phase and track the normalization of traceless Hermitian tangent generators.
-- **Dependencies and story role:** M02, M04. This provides coordinates for local calculations without changing the global target space.
-- **Conceptual connection:** Gauge freedom must be removed before comparing Fisher matrices or precision constants.
-- **Source pointers:** Anchor §1.2; [parameter and normalization](../science/model.md#the-constants), [phase-insensitive representation](../science/global_converse.md#1-a-phase-insensitive-embedding).
+### M06 — Gate loss and the returned model
 
-### M06 — Specify success before precision
+- **Central question:** What is an accurate reusable classical estimate?
+- **Understanding target:** Distinguish average gate infidelity, process loss and the local quadratic cost; tie every claimed coefficient to the same operational output and loss.
+- **Dependencies and story role:** M01–M05; defines success before measuring information.
+- **Conceptual connection:** The loss fixes the meaning of a precision coefficient.
+- **Source pointers:** Petz §§10.1–10.3; [returned estimate and loss](../science/model.md#what-the-learner-returns).
 
-- **Central question:** What does an accurate learned unitary mean in this task?
-- **Understanding target:** Distinguish Haar-average gate infidelity, process loss, and local squared coordinate error.
-- **Dependencies and story role:** M01–M05. It connects a reusable classical estimate to its operational test criterion.
-- **Conceptual connection:** A cost matrix is induced by the chosen loss; it cannot be replaced by an arbitrary parameter norm.
-- **Source pointers:** Anchor §1.2; [returned model and loss](../science/model.md#what-the-learner-returns), [local loss weight](../science/collective_attainment.md#the-local-information-matrix).
+### M07 — Measurements and retained records
 
-### M07 — A measurement creates a classical record
+- **Central question:** How does readout change what later processing can use?
+- **Understanding target:** Specify normalized POVMs, classical outcomes and quantum memory; distinguish per-pair SEP, PAIR and unrestricted collective processing.
+- **Dependencies and story role:** M01–M04; gives the first three physically meaningful permissions.
+- **Conceptual connection:** Quantum retention changes the permitted channel from data to record.
+- **Source pointers:** Petz §§9.1–9.2; [readout classes](../science/model.md#the-readout-classes).
 
-- **Central question:** How do POVM effects determine what is retained after quantum data are measured?
-- **Understanding target:** Read outcome probabilities from the state and effects, and distinguish a normalized POVM from a postselected test.
-- **Dependencies and story role:** M01–M04. It defines the local information-extraction operation.
-- **Conceptual connection:** Converting a specimen into a classical outcome imposes a physical boundary on later processing.
-- **Source pointers:** Anchor §1.2; [readout classes](../science/model.md#the-readout-classes), [actual normalized operations](../science/resources.md#a-normalized-povm-is-an-actual-operation).
+### M08 — Classical and quantum information budgets
 
-### M08 — Scores and simultaneous information
+- **Central question:** How do simultaneous parameter directions constrain precision?
+- **Understanding target:** Interpret scores, classical Fisher matrices and the SLD upper bound; explain why a trace ceiling needs an isotropic attaining design.
+- **Dependencies and story role:** M05–M07; provides common quantities for the paired comparison.
+- **Conceptual connection:** Simultaneous learning requires more than optimizing one parameter direction.
+- **Source pointers:** Petz §§10.1–10.3; [information constants](../science/model.md#the-constants); [SLD calculation](../science/collective_attainment.md#the-local-information-matrix).
 
-- **Central question:** How is sensitivity to many unitary directions summarized by one measurement?
-- **Understanding target:** Interpret the classical score, Fisher matrix, its trace, and why trace optimality alone does not ensure isotropic precision.
-- **Dependencies and story role:** M05–M07. It supplies the common language for comparing readout ceilings.
-- **Conceptual connection:** Multi-parameter learning requires accounting for all relevant directions at once.
-- **Source pointers:** Anchor §2.1; [SEP tangent responses](../science/separable_readout.md#2-sum-the-tangent-responses), [model constants](../science/model.md#the-constants).
+### M09 — Coarse-graining and statistical sufficiency
 
-### M09 — Quantum information is a bound on readout
+- **Central question:** When does a classical record retain a whole experiment?
+- **Understanding target:** Express a readout or lost permutation as a channel; define target-independent measurement and reconstruction and distinguish exact sufficiency from vanishing-error asymptotic recovery.
+- **Dependencies and story role:** M07; establishes the language needed after correspondence is erased.
+- **Conceptual connection:** A sufficient record preserves an experiment through a reverse physical channel.
+- **Source pointers:** Petz §§9.1–9.2, 9.5; [anonymous-batch application](../science/anonymous-batches.md).
 
-- **Central question:** What does the SLD quantum Fisher matrix say before a measurement is chosen?
-- **Understanding target:** Explain the relation between an actual classical Fisher matrix and the state's SLD information.
-- **Dependencies and story role:** M07–M08. It introduces the unrestricted information benchmark.
-- **Conceptual connection:** State distinguishability bounds measurement performance but need not identify a simultaneous attaining measurement.
-- **Source pointers:** Anchor §2.2; [local SLD matrix](../science/collective_attainment.md#the-local-information-matrix).
+### M10 — Global risk and ordered limits
 
-### M10 — Compatibility is more than operator commutation
+- **Central question:** What is needed beyond a local information formula?
+- **Understanding target:** Allow biased adaptive estimators; distinguish local bounds, unknown-center attainment, fixed-dimension precision limits and uniform bounded-decision comparisons.
+- **Dependencies and story role:** M05–M09; prepares both branches of the scientific story.
+- **Conceptual connection:** Derivative-sensitive precision and bounded-decision convergence have different quantifiers.
+- **Source pointers:** Petz §§10.1–10.3; [risk and limiting order](../science/model.md#risk-and-limiting-order).
 
-- **Central question:** Why are Holevo bounds and collective limits needed beyond QFI?
-- **Understanding target:** Separate noncommuting SLD operators, zero mean commutators, equality of bounds, and physical attainability.
-- **Dependencies and story role:** M08–M09. It prevents the collective benchmark from being mistaken for a single-pair protocol.
-- **Conceptual connection:** A local matrix bound and an asymptotic measurement capability are distinct statements.
-- **Source pointers:** Anchor §§2.3, 2.6, 2.10–2.11; [Holevo evaluation](../science/collective_attainment.md#evaluation-of-the-holevo-value).
+## Narrative/innovation — M11–M30
 
-### M11 — Local precision and global risk
+### M11 — The sharp separable-effect ceiling
 
-- **Central question:** How do locally centered estimation, Haar Bayes risk, and worst-case risk differ?
-- **Understanding target:** Recognize why a known-center bound does not by itself solve an unknown-center problem, and how symmetry can relate global criteria.
-- **Dependencies and story role:** M05–M10. It assembles the statistical viewpoints needed for the final theorem.
-- **Conceptual connection:** Covariance removes an arbitrary preferred target, while globalization must still be proved.
-- **Source pointers:** Anchor §§4.5–4.6.4, 5.3, 5.5; [risk and limiting order](../science/model.md#risk-and-limiting-order).
+- **Central question:** What limits every permitted separable measurement on one pair?
+- **Understanding target:** Refine effects to product terms and use positivity, completeness and concavity to obtain the exact SEP Fisher-trace ceiling.
+- **Dependencies and story role:** M03–M08; proves the first constrained converse.
+- **Conceptual connection:** Completeness couples the contributions of all measurement effects.
+- **Source pointers:** [Separable readout](../science/separable_readout.md#the-sharp-one-pair-ceiling).
 
-### M12 — State the complete comparison
+### M12 — A causal readout that attains SEP
 
-- **Central question:** Which assumptions remain fixed when the three readouts are compared?
-- **Understanding target:** State the same source, unitary output, loss, visibility, and sample count for SEP, PAIR and COLL, with $`N\to\infty`$ taken at fixed $`d,v`$.
-- **Dependencies and story role:** M01–M11. This is the background synthesis: a complete comparison problem rather than three unrelated protocols.
-- **Conceptual connection:** A resource hierarchy is meaningful only after the task and limiting convention are shared.
-- **Source pointers:** Anchor §§1.2, 4.5; [complete model](../science/model.md), [interpretation](../science/interpretation.md).
-
-## Narrative/innovation — M13–M30
-
-### M13 — Read the response of one product effect
-
-- **Central question:** How does a single separable measurement effect respond to a small unitary change?
-- **Understanding target:** Reduce its likelihood to a squared overlap and explain why the total tangent response is proportional to $`t(1-t)`$.
-- **Dependencies and story role:** M05, M07–M08, M12. This starts the new argument with one local effect.
-- **Conceptual connection:** Generator completeness converts many derivative components into one geometric overlap.
-- **Source pointers:** Anchor §2.1 as framework; [product-effect refinement](../science/separable_readout.md#1-refine-to-product-effects), [response identity](../science/separable_readout.md#2-sum-the-tangent-responses).
-
-### M14 — Completeness limits every separable readout
-
-- **Central question:** Why can no rearrangement of separable effects exceed the SEP Fisher budget?
-- **Understanding target:** Combine POVM completeness, its fixed mean overlap, concavity, and refinement monotonicity into the sharp ceiling.
-- **Dependencies and story role:** M13. It passes from one effect to every allowed one-pair separable measurement.
-- **Conceptual connection:** Normalization is an information constraint, not just a consistency check.
-- **Source pointers:** Anchor §2.1 as framework; [sharp SEP proof](../science/separable_readout.md#2-sum-the-tangent-responses).
-
-### M15 — A simple local measurement meets the ceiling
-
-- **Central question:** Can the SEP ceiling be attained without within-pair communication or postselection?
-- **Understanding target:** Explain the shared 2-design basis and Fourier-related basis, equal overlaps, and isotropic Fisher matrix at a known center.
-- **Dependencies and story role:** M14. It completes the first local optimization with an actual normalized measurement.
-- **Conceptual connection:** Mutually unbiased bases meet the scalar equality condition; design symmetry distributes precision over all directions.
-- **Source pointers:** Anchor §2.1 for centered estimation; [attaining product design](../science/separable_readout.md#3-a-local-product-measurement-attains-the-ceiling).
-
-### M16 — Joint effects mix exchange sectors
-
-- **Central question:** What extra response becomes available when the two registers can be measured together?
-- **Understanding target:** Decompose a rank-one joint effect into symmetric and antisymmetric components and identify the cross-sector derivative.
-- **Dependencies and story role:** M04–M05, M08, M15. It introduces the mechanism behind the next readout tier.
-- **Conceptual connection:** Joint readout probes a coherence between exchange sectors that product effects cannot use equally well.
-- **Source pointers:** Anchor §§2.1–2.2 as framework; [joint-effect decomposition](../science/joint_pair_readout.md#sharp-information-ceiling).
-
-### M17 — Derive the sharp joint-pair ceiling
-
-- **Central question:** What prevents an arbitrary joint-pair measurement from reaching the collective benchmark?
-- **Understanding target:** Connect paired singular values of an antisymmetric coefficient matrix, the gradient norm bound, and completeness-fixed sector weights.
-- **Dependencies and story role:** M16. It turns the local exchange-sector mechanism into a ceiling for every pair POVM.
-- **Conceptual connection:** Matrix structure and POVM concavity impose a simultaneous-measurement tradeoff.
-- **Source pointers:** Anchor §§2.3, 2.10 for the comparison framework; [antisymmetric estimate](../science/joint_pair_readout.md#the-antisymmetric-matrix-estimate), [completeness step](../science/joint_pair_readout.md#completeness-fixes-the-optimal-mixture).
-
-### M18 — Normalize the optimal joint-pair seed
-
-- **Central question:** Which joint measurement attains the pair ceiling in every direction?
-- **Understanding target:** Explain the two-sector seed, its covariant twirl, equality in the matrix bound, and adjoint-isotropic Fisher information.
-- **Dependencies and story role:** M17. It completes the second local optimization with a normalized POVM.
-- **Conceptual connection:** An orbit of locally optimal effects must also resolve the identity to define a valid measurement.
-- **Source pointers:** Anchor §5.3 as a symmetry connection; [attaining covariant measurement](../science/joint_pair_readout.md#a-normalized-attaining-measurement).
-
-### M19 — An attaining POVM must count all outcomes
-
-- **Central question:** How can the covariant pair measurement be a physical operation without discarding most examples?
-- **Understanding target:** Distinguish a finite-design normalized frame and its Naimark realization from random binary testing followed by successful-outcome selection.
-- **Dependencies and story role:** M07, M18. It connects the ideal local optimum to a complete measurement account.
-- **Conceptual connection:** Sample optimality survives a normalized dilation, but does not supply cheap gate synthesis.
-- **Source pointers:** Anchor §1.2 for POVM normalization; [finite realization](../science/joint_pair_readout.md#finite-realization-and-its-resource-meaning), [resource distinction](../science/resources.md#a-normalized-povm-is-an-actual-operation).
-
-### M20 — Compute the collective information matrix
-
-- **Central question:** What information remains in the source before any pair has been converted to a classical record?
-- **Understanding target:** Reconstruct the SLDs, the scalar $`j`$, and the real complex Gram matrix for all unitary tangents.
-- **Dependencies and story role:** M09–M10, M16–M18. It places the two measurement ceilings beside the source's collective benchmark.
-- **Conceptual connection:** A fixed separable source can retain multiparameter information inaccessible to any single-pair classical record.
-- **Source pointers:** Anchor §§2.2, 2.6; [collective local matrix](../science/collective_attainment.md#the-local-information-matrix).
-
-### M21 — Evaluate the Holevo value and its local meaning
-
-- **Central question:** Why does this model's Holevo value equal the SLD value, and what has that established?
-- **Understanding target:** Use the dual SLD operators to evaluate the bound, then separate that calculation from the smooth-model local-attainment theorem.
-- **Dependencies and story role:** M10, M20. It identifies the attainable local collective target without assuming a known global center.
-- **Conceptual connection:** Weak compatibility removes the Holevo penalty; a separate theorem supplies asymptotic measurements.
-- **Source pointers:** Anchor §§2.3, 2.6, 2.11, 4.6; [Holevo calculation](../science/collective_attainment.md#evaluation-of-the-holevo-value), [local theorem](../science/collective_attainment.md#the-local-theorem-used).
-
-### M22 — Upgrade pointwise local attainment carefully
-
-- **Central question:** How does a local theorem at a dense set of shifts control all shifts in a bounded neighborhood?
-- **Understanding target:** Explain clipping, fidelity-based equicontinuity, finite nets, and why bounded-loss control is required.
-- **Dependencies and story role:** M21. It supplies the uniform local ingredient needed by an unknown-center procedure.
-- **Conceptual connection:** Convergence in a local statistical model must be matched to the loss being averaged.
-- **Source pointers:** Anchor §§4.2, 4.5–4.6; [uniform local control](../science/collective_attainment.md#uniform-local-control-after-clipping).
-
-### M23 — Express global loss without a coordinate chart
-
-- **Central question:** How can a unitary estimate's loss be embedded globally while ignoring phase?
-- **Understanding target:** Relate the adjoint representation's character and Frobenius distance to process loss, and identify its tangent Gram and Laplacian.
-- **Dependencies and story role:** M05–M06, M11. It begins the global converse with geometry valid far from the true target.
-- **Conceptual connection:** Compact-group structure replaces a potentially dimension-sensitive local chart.
-- **Source pointers:** Anchor §5.3 as a covariance connection; [global embedding](../science/global_converse.md#1-a-phase-insensitive-embedding), [tangent identities](../science/global_converse.md#2-the-tangent-identities).
-
-### M24 — Bound global risk without unbiasedness
-
-- **Central question:** How does Haar integration by parts convert a Fisher trace budget into a bound on any estimator?
-- **Understanding target:** Follow the score identity and tangent projection estimate to the global risk inequality, without differentiating the estimator.
-- **Dependencies and story role:** M08, M23. It extends the converse beyond locally unbiased procedures.
-- **Conceptual connection:** The prior's group symmetry and the loss embedding work together to control biased estimates.
-- **Source pointers:** Anchor §5.5 as methodological background; [Haar score identity](../science/global_converse.md#3-haar-integration-by-parts), [Cauchy–Schwarz step](../science/global_converse.md#4-cauchyschwarz-closes-the-argument).
-
-### M25 — Keep the converse under every permitted history
-
-- **Central question:** Why do adaptation and collective processing obey the appropriate global information budget?
-- **Understanding target:** Distinguish conditional-score additivity for SEP/PAIR from additive SLD information bounding a global collective POVM.
-- **Dependencies and story role:** M14, M17, M20, M24. It applies one global converse to all three classes.
-- **Conceptual connection:** Classical adaptation and quantum retention require different arguments, even when they enter the same inequality.
-- **Source pointers:** Anchor §§2.1, 2.10; [adaptive and collective budgets](../science/global_converse.md#5-why-the-fisher-budgets-apply-to-adaptive-and-collective-protocols).
-
-### M26 — Remove the known center for pairwise readouts
-
-- **Central question:** How do the locally optimal SEP and PAIR measurements become global learning protocols?
-- **Understanding target:** Explain the informationally complete pilot, model fit, counterrotation, and one-step score estimate; track why their bias and pilot costs are lower order.
-- **Dependencies and story role:** M15, M18–M19, M23–M25. It matches the first two global lower bounds with unknown-center upper bounds.
-- **Conceptual connection:** Calibration is charged, but fixed-dimensional regularity makes its leading precision cost vanish.
-- **Source pointers:** Anchor §§2.1, 4.5; [pilot and one-step construction](../science/separable_readout.md#5-global-fixed-dimensional-attainability), [PAIR risk consequence](../science/joint_pair_readout.md#consequence-for-the-learning-risk).
-
-### M27 — Globalize the collective optimum
-
-- **Central question:** How does the collective protocol handle a center learned from a finite pilot, including rare pilot failures?
-- **Understanding target:** Connect the slowly growing local radius, clipped collective estimator, and second-moment tail control into a uniform global risk bound.
-- **Dependencies and story role:** M21–M22, M25–M26. It closes the remaining local-to-global gap.
-- **Conceptual connection:** A small failure probability alone is insufficient when the scaled loss can be large.
-- **Source pointers:** Anchor §§4.5–4.6.4; [global pilot](../science/collective_attainment.md#a-global-pilot-with-exponential-tails), [radius schedule](../science/collective_attainment.md#a-slowly-growing-local-neighborhood), [failure contribution](../science/collective_attainment.md#the-pilot-failure-contribution).
-
-### M28 — Match the complete three-tier theorem
-
-- **Central question:** What remains once each global converse is paired with its attaining procedure?
-- **Understanding target:** Recover the three exact coefficients for one shared loss, their two multiplicative penalties, and the equality of Haar Bayes and worst-case risks.
-- **Dependencies and story role:** M12, M25–M27. This integrates the mathematical result across all readouts.
-- **Conceptual connection:** Isotropy, global estimation and a common loss turn information ceilings into comparable learning precision.
-- **Source pointers:** Anchor §§4.6.4, 5.3; [canonical coefficients](../science/model.md#the-constants), [global covariance](../science/collective_attainment.md#converse-and-group-covariance).
-
-### M29 — Price the interpretation and preserve the limits
-
-- **Central question:** Which physical and computational costs lie outside the exact sample coefficients?
-- **Understanding target:** Account for private source seeds, retention boundaries, measurement synthesis, calibration, classical fitting and unitary output; keep the ordered limit separate from fixed-error or runtime claims.
-- **Dependencies and story role:** M02–M04, M19, M28. It connects the completed theorem to an implementable learning task.
-- **Conceptual connection:** Precision advantage and efficient end-to-end computation are separate outcomes.
-- **Source pointers:** Anchor §4.5 for asymptotic applicability; [resource account](../science/resources.md), [dimension dependence](../science/interpretation.md#what-the-dimension-dependence-establishes).
-
-### M30 — Explain the whole contribution
-
-- **Central question:** What does this hierarchy establish after established estimation tools and earlier separable-probe results are credited?
-- **Understanding target:** Give one coherent account of the same passive learning task, the two distinct readout gains, the sharp global precision law, and its scientific scope.
-- **Dependencies and story role:** M01–M29. This is the narrative synthesis, joining the mechanism, proofs, attainment, attribution and limits.
-- **Conceptual connection:** The consequence is a precise separation of within-example and between-example coherence, rather than a general claim that separability prevents or guarantees quantum learning advantage.
-- **Source pointers:** Anchor §§1.3, 6 for the wider estimation perspective; [interpretation](../science/interpretation.md), [scientific route](../science/README.md), [related-work comparison](../references/related_work.md).
+- **Central question:** Can the separable ceiling be met by a complete physical protocol?
+- **Understanding target:** Use a shared random basis and Fourier-related second basis, include all outcomes, and explain the diluted conditional state of the output.
+- **Dependencies and story role:** M11; matches the first converse with a causal design.
+- **Conceptual connection:** An attaining causal protocol can saturate a broader measurement-class converse.
+- **Source pointers:** [Local attaining measurement](../science/separable_readout.md#3-a-local-product-measurement-attains-the-ceiling); [conditional state](../science/separable_readout.md#4-what-measuring-the-first-register-does).
+
+### M13 — Joint readout of an identified pair
+
+- **Central question:** What additional precision is available inside one pair?
+- **Understanding target:** Derive the PAIR trace ceiling from the exchange sectors and explain how an entangled seed reaches it for all unitary directions.
+- **Dependencies and story role:** M04, M08, M11; separates pair coherence from separable readout.
+- **Conceptual connection:** Measurement entanglement and source entanglement are distinct resources.
+- **Source pointers:** [Joint-pair ceiling](../science/joint_pair_readout.md#sharp-information-ceiling); [attaining seed](../science/joint_pair_readout.md#a-normalized-attaining-measurement).
+
+### M14 — Count a normalized measurement
+
+- **Central question:** Why is a seed or selected success event insufficient?
+- **Understanding target:** Normalize the covariant POVM, obtain a finite design realization, and count settings, outcomes and synthesis rather than assuming that one favorable test is free.
+- **Dependencies and story role:** M12–M13; turns information saturation into an actual operation.
+- **Conceptual connection:** Normalization and all-outcome accounting make a statistical design physically meaningful.
+- **Source pointers:** Petz §§9.1–9.2; [finite realization](../science/joint_pair_readout.md#finite-realization-and-its-resource-meaning).
+
+### M15 — The collective information matrix
+
+- **Central question:** What can all the supplied pairs contain before readout?
+- **Understanding target:** Differentiate the orbit state, verify the SLD equation and compute the complete complex SLD Gram matrix with the stated generator normalization.
+- **Dependencies and story role:** M04–M08; supplies the unrestricted paired benchmark.
+- **Conceptual connection:** The same source admits different information extraction depending on retained coherence.
+- **Source pointers:** [Local SLD matrix](../science/collective_attainment.md#the-local-information-matrix).
+
+### M16 — Compatibility and the Holevo value
+
+- **Central question:** Why does a collective limit exceed every one-pair measurement?
+- **Understanding target:** Distinguish operator commutation from zero mean commutators; evaluate the Holevo objective with dual SLDs without claiming a simultaneous one-pair attainer.
+- **Dependencies and story role:** M10, M15; identifies the local collective optimum and its scope.
+- **Conceptual connection:** Vanishing expected commutators permits a collective limit without operator commutation.
+- **Source pointers:** Petz §§10.1–10.3 as estimation background; [Holevo evaluation](../science/collective_attainment.md#evaluation-of-the-holevo-value) and its specialist references.
+
+### M17 — A converse for biased adaptive learners
+
+- **Central question:** How does a local information ceiling bound global learning risk?
+- **Understanding target:** Use the phase-insensitive adjoint embedding and Haar integration by parts, then retain the Fisher budgets under complete adaptive histories and collective readout.
+- **Dependencies and story role:** M10–M16; establishes a valid global lower bound for each class.
+- **Conceptual connection:** A global integration identity can constrain learners without differentiating their estimates.
+- **Source pointers:** [Global converse](../science/global_converse.md); [adaptive budgets](../science/global_converse.md#5-why-the-fisher-budgets-apply-to-adaptive-and-collective-protocols).
+
+### M18 — Attainment at an unknown target
+
+- **Central question:** How is the privileged coordinate center removed?
+- **Understanding target:** Count the pilot, counterrotate by known estimated controls, and control compact local risks and pilot-error second moments with the correct local theorem hypotheses.
+- **Dependencies and story role:** M12–M17; matches the global converses without knowing the unitary.
+- **Conceptual connection:** An unknown-center theorem must count calibration errors and the pilot budget.
+- **Source pointers:** [SEP globalization](../science/separable_readout.md#5-global-fixed-dimensional-attainability); [collective localization](../science/collective_attainment.md#a-global-pilot-with-exponential-tails).
+
+### M19 — The complete paired precision hierarchy
+
+- **Central question:** What do the three exact coefficients establish together?
+- **Understanding target:** Recover the successive factors from joint-pair and cross-example coherence; explain Haar/minimax equality and the fixed-dimension order of limits.
+- **Dependencies and story role:** M11–M18; closes the original paired comparison before changing acquisition.
+- **Conceptual connection:** Two coherent-readout resources give two distinct precision gains.
+- **Source pointers:** [The exact constants](../science/model.md#the-constants); [interpretation](../science/interpretation.md#three-different-opportunities-to-measure).
+
+### M20 — Erase correspondence and change the class
+
+- **Central question:** What is the receiver allowed after the shuffle?
+- **Understanding target:** Define the anonymous state, withheld records and separate collective list measurements; explain why the old per-pair SEP converse does not address this class.
+- **Dependencies and story role:** M07, M09, M19; opens the complementary acquisition question.
+- **Conceptual connection:** Acquisition loss and readout restriction change different parts of the experiment.
+- **Source pointers:** Petz §§9.1–9.2; [anonymous-batch model](../science/anonymous-batches.md#the-source-and-the-two-readout-interfaces).
+
+### M21 — The exact anonymous kernel and ceiling
+
+- **Central question:** Why does one large anonymous batch retain only bounded information?
+- **Understanding target:** Understand the relative-permutation cycle kernel and strict-contraction purity bound, crediting Correspondence as its owner and distinguishing an upper bound from a receiver.
+- **Dependencies and story role:** M03–M04, M20; identifies the information that might survive.
+- **Conceptual connection:** A source-level ceiling limits every receiver but does not construct an optimal one.
+- **Source pointers:** Petz §§3.3–3.5, 5.5; [anonymous application](../science/anonymous-batches.md); Correspondence’s versioned kernel citation there.
+
+### M22 — A candidate Gaussian covariance experiment
+
+- **Central question:** What do the collective fluctuations suggest?
+- **Understanding target:** Derive the centered local fluctuation covariances and the cross-correlation matrix; recognize that each list marginal is target independent while their relation is informative.
+- **Dependencies and story role:** M20–M21; proposes a limiting classical object without yet proving sufficiency.
+- **Conceptual connection:** Random local records can have a target-dependent joint law.
+- **Source pointers:** [Gaussian application](../science/anonymous-batches.md#application-of-the-separate-list-sufficiency-theorem); [worked Gaussian example](TUTORIAL.md#10-one-gaussian-observation-and-its-information).
+
+### M23 — Equality of the full likelihood norms
+
+- **Central question:** What rules out information hidden beyond the fluctuations?
+- **Understanding target:** Match the exact quantum collision-norm limit to the Gaussian likelihood L2 norm; explain why convergence of covariances or characteristic functions alone leaves a possible remainder.
+- **Dependencies and story role:** M21–M22; supplies the decisive saturation argument.
+- **Conceptual connection:** Equality of complete likelihood norms excludes an unobserved statistical remainder.
+- **Source pointers:** [Full-likelihood explanation](../science/anonymous-batches.md#application-of-the-separate-list-sufficiency-theorem); [norm worked example](TUTORIAL.md#11-why-matching-a-covariance-is-not-enough).
+
+### M24 — Bounded Fourier likelihood approximation
+
+- **Central question:** How does norm saturation approximate the whole state family?
+- **Understanding target:** Use local permutation-invariant Fourier unitaries, their limiting Gram matrix and density of finite Fourier sums; choose finite approximants uniformly over the compact target family.
+- **Dependencies and story role:** M23; converts a candidate Gaussian description into full operator likelihood control.
+- **Conceptual connection:** Bounded Fourier functions connect weak fluctuation limits to strong likelihood approximation.
+- **Source pointers:** [Fourier worked route](TUTORIAL.md#11-why-matching-a-covariance-is-not-enough); authoritative proof cited in [the application](../science/anonymous-batches.md).
+
+### M25 — Almost commuting operators become a receiver
+
+- **Central question:** How can several local fluctuation coordinates be measured together?
+- **Understanding target:** Show vanishing normalized-Hilbert–Schmidt commutators and apply Glebsky’s fixed-finite-family theorem separately on each list, without assuming operator-norm commutation or efficient synthesis.
+- **Dependencies and story role:** M24; supplies the physical measurement missing from weak fluctuation convergence.
+- **Conceptual connection:** Approximate commutation in a dimension-normalized norm can yield exact compatible measurements.
+- **Source pointers:** [Receiver mechanism](TUTORIAL.md#12-a-classical-record-that-can-reconstruct-the-state); Glebsky Theorem 2 cited in [the application](../science/anonymous-batches.md).
+
+### M26 — Scalar conditional expectation and reconstruction
+
+- **Central question:** What exactly is retained by the two classical labels?
+- **Understanding target:** Measure the common local spectral projectors and prepare their normalized identities; distinguish this scalar abelian conditional expectation from ordinary block pinching.
+- **Dependencies and story role:** M09, M25; constructs a truly classical measurement-and-preparation channel.
+- **Conceptual connection:** A classical block label does not retain an arbitrary state inside its subspace.
+- **Source pointers:** Petz §§9.1–9.2, 9.5; [reconstruction example](TUTORIAL.md#12-a-classical-record-that-can-reconstruct-the-state).
+
+### M27 — Uniform recovery and bounded decisions
+
+- **Central question:** Why does one receiver work without knowing the target?
+- **Understanding target:** Use a compact-family finite cover and a diagonal finite-frequency schedule, then turn uniform trace reconstruction into a bound for every prior and bounded decision loss.
+- **Dependencies and story role:** M24–M26; closes the operational sufficiency theorem.
+- **Conceptual connection:** Uniform state recovery controls every bounded decision rule by channel contraction.
+- **Source pointers:** Petz §9.5; [decision consequence](../science/anonymous-batches.md#what-the-corollary-permits).
+
+### M28 — Gaussian equivalence and coherent prediction
+
+- **Central question:** Does the theorem describe a complete limiting experiment?
+- **Understanding target:** Understand the two parameter-independent randomizations obtained from reference couplings; apply trace-norm contractivity to a processor that consumes the data with a later quantum input.
+- **Dependencies and story role:** M22–M27; relates the classical covariance experiment to every bounded prediction task, not just identification.
+- **Conceptual connection:** A complete limiting experiment requires randomizations in both directions.
+- **Source pointers:** [Full application](../science/anonymous-batches.md); [Gaussian and prediction explanation](TUTORIAL.md#13-limits-resources-and-the-whole-story).
+
+### M29 — Batch tags limits and physical costs
+
+- **Central question:** What remains unproved when both batch size and batch count grow?
+- **Understanding target:** State the product-error condition, charge all supplied pairs and per-list coherent memory/control, and avoid inferring Fisher-information convergence, a precision coefficient or growing-dimension efficiency.
+- **Dependencies and story role:** M10, M19, M27–M28; preserves the scientific limits of both theorems.
+- **Conceptual connection:** A vanishing per-batch error need not vanish after an uncontrolled number of repetitions.
+- **Source pointers:** [Batch limits](../science/anonymous-batches.md#limit-order-and-charged-resources); [resource account](../science/resources.md).
+
+### M30 — Explain the combined scientific story
+
+- **Central question:** How do readout and correspondence play different operational roles?
+- **Understanding target:** Present the source, both acquisition interfaces, the paired hierarchy and anonymous sufficiency consequence, proof ownership, inherited tools, attained statements and remaining limits as one connected account.
+- **Dependencies and story role:** M01–M29; integrates the complete project rather than adding a claim from a headline scaling.
+- **Conceptual connection:** Resource assumptions, attribution and limits belong in the statement of the scientific contribution.
+- **Source pointers:** [Scientific route](../science/README.md); [attribution](../references/related_work.md); [Petz bridge](ANCHOR_BRIDGE.md).
 
